@@ -40,9 +40,14 @@ body {
 }
 
 .navbar {
-  background: #151515;
+  background:  #151515;
   padding: 10px 60px;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
 }
+
+
 
 .dropdown-menu,
 .dropdown-item {
@@ -66,14 +71,15 @@ h3 {
   height: 100vh;
 }
 
-/* .row {
+ .row {
   padding: 10px;
 }
 
-.col-sm-3 {
-  margin: 10px;
-} */
-
-.templates {
-  flex-wrap: nowrap | wrap | wrap-reverse;
+.form {
+  margin: 50px auto;
 }
+
+#banner {
+  padding: 100px 0 0 0;
+}
+
