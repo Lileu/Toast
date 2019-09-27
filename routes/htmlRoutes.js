@@ -1,27 +1,32 @@
+// Use path for relative routes to HTML files
+var path = require("path");
+
+// Require custom middleware to see if user is logged in
+var isAuthenticated = require("../config/middleware/isAuthenticated");
+
 var db = require("../models");
 
-module.exports = function(app) {
-  // Load index page
-  app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.render("index", {
-        msg: "Welcome!",
-        examples: dbExamples
-      });
-    });
+module.exports = function (app) {
+
+  // Load members page if user has logged in
+  app.get("/", function (req, res) {
+    if (req.user) {
+      res.redirect("/members");
+    }
+    res.sendFile(path.join(__dirname, "../public/signup.html"));
   });
 
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("example", {
-        example: dbExample
-      });
-    });
+  // Load login page
+  app.get("/login", function (req, res) {
+    if (req.user) {
+      res.redirect("/members");
+    }
+    res.sendFile(path.join(__dirname, "../public/login.html"));
   });
 
-  // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
-    res.render("404");
+  // Authentication route
+  // If user has not logged in, will be redirected to signup page
+  app.get("/members", isAuthenticated, function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/members.html"));
   });
 };
