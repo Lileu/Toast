@@ -5,9 +5,14 @@ var bcrypt = require("bcryptjs");
 // Create user model
 module.exports = function (sequelize, DataTypes) {
   var User = sequelize.define("User", {
+    facebook_id: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      unique: true
+    },
     email: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       unique: true,
       validate: {
         isEmail: true
@@ -16,7 +21,7 @@ module.exports = function (sequelize, DataTypes) {
     // Password not nullable
     password: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     }
   });
 
@@ -28,11 +33,13 @@ module.exports = function (sequelize, DataTypes) {
 
   // Before User is created, password will be automatically hashed
   User.beforeCreate(user => {
-    user.password = bcrypt.hashSync(
-      user.password,
-      bcrypt.genSaltSync(10),
-      null
-    );
+    if (user.email) {
+      user.password = bcrypt.hashSync(
+        user.password,
+        bcrypt.genSaltSync(10),
+        null
+      );
+    }
   })
 
   return User;
