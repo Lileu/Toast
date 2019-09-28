@@ -30,7 +30,7 @@ passport.use(new LocalStrategy(
             });
          }
          return done(null, dbUser);
-      })
+      });
    }
 ));
 
@@ -41,37 +41,43 @@ passport.use(new FacebookStrategy({
    callbackURL: "http://localhost:3000/auth/facebook/callback"
 },
    function (accessToken, refreshToken, profile, done) {
-      User.findOne({
+      db.User.findOne({
          // Searches the user table to see if there is anyone with a facebook ID with profile.id
-         "facebook.id": profile.id
-      }, function (error, user) {
-         if (error) {
-            return done(error);
-         }
-         // No user found, create new user
-         if (!user) {
-            user = new User({
-               name: profile.displayName,
-               email: profile.emails[0].value,
-               username: profile.username,
-               provider: "facebook",
-               // Searches table for facebook id for future logins
-               facebook: profile._json
-            });
-            user.save(function (error) {
-               if (error)
-                  console.log(error);
-               return done(error, user);
-            });
-         }
-         // If the user has been found
-         else {
-            return done(error, user);
+         where: {
+            "facebook_id": profile.id
          }
       })
-      console.log(profile);
+         .then(dbUser => {
+            // No user found, create new user
+            if (!dbUser) {
+               console.log("Creating user for", profile.id)
+               console.log(profile)
+               user = new db.User({
+                  name: profile.displayName,
+                  username: profile.username,
+                  provider: "facebook",
+                  // Searches table for facebook id for future logins
+                  facebook: profile._json
+               });
+               user.save().then(function (user) {
+                  console.log("User created, user")
+                  return done(null, user);
+               }).catch((error) => {
+                  console.log("Could not create user", error)
+                  done(error, null)
+               });
+            }
+            // If the user has been found
+            else {
+               console.log("user found");
+               return done(error, user);
+            }
+         })
+         .catch(error => {
+            return done(error);
+         });
    }
-))
+));
 
 // Keeps authentication state across HTTP requests, sequelize needs to serialise and deserialise user
 passport.serializeUser(function (user, cb) {
