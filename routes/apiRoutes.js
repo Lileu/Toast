@@ -47,6 +47,16 @@ module.exports = function (app) {
     })
   })
 
+  // Facebook authentication
+  app.get("/auth/facebook", passport.authenticate("facebook"));
+
+  // After authentication, will redirect the user.
+  // Gets access token 
+  app.get("/auth/facebook/callback", passport.authenticate("facebook", {
+    successRedirect: "/members",
+    failureRedirect: "/api/signup"
+  }));
+
   // Delete an example by id
   app.delete("/api/examples/:id", function (req, res) {
     db.Example.destroy({ where: { id: req.params.id } }).then(function (dbExample) {

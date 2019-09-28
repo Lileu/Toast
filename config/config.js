@@ -1,14 +1,16 @@
-{
+require("dotenv").config();
+
+module.exports = {
   "development": {
     "username": "root",
-    "password": "LOCALHOSTPASSWORD",
+    "password": process.env.LOCALHOSTPASSWORD,
     "database": "toast_db",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "LOCALHOSTPASSWORD",
+    "password": process.env.LOCALHOSTPASSWORD,
     "database": "testdb",
     "host": "localhost",
     "dialect": "mysql",
