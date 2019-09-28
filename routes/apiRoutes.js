@@ -53,8 +53,8 @@ module.exports = function (app) {
   // After authentication, will redirect the user.
   // Gets access token 
   app.get("/auth/facebook/callback", passport.authenticate("facebook", {
-    successRedirect: "/",
-    failureRedirect: "/login"
+    successRedirect: "/members",
+    failureRedirect: "/api/signup"
   }));
 
   // Delete an example by id
