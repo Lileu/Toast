@@ -34,21 +34,21 @@
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Templates
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Wedding</a>
-                <a class="dropdown-item" href="#">Anniversary</a>
-                <a class="dropdown-item" href="#">Birthday</a>
-                <a class="dropdown-item" href="#">Engagement</a>
-                <a class="dropdown-item" href="#">Hen's</a>
-                <a class="dropdown-item" href="#">Buck's</a>
-                <a class="dropdown-item" href="#">Christening</a>
-                <a class="dropdown-item" href="#">Baby Shower</a>
-            </div>
+        <div class="menu" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Wedding</a>
+            <a class="dropdown-item" href="#">Anniversary</a>
+            <a class="dropdown-item" href="#">Birthday</a>
+            <a class="dropdown-item" href="#">Engagement</a>
+            <a class="dropdown-item" href="#">Hen's</a>
+            <a class="dropdown-item" href="#">Buck's</a>
+            <a class="dropdown-item" href="#">Christening</a>
+            <a class="dropdown-item" href="#">Baby Shower</a>
+        </div>
         </li>
         <h1 id="logo">TOAST</h1>
         <li class="nav-item" id="sign-in">
@@ -63,7 +63,21 @@
             <div class="col-sm-6">
                 <form>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
+                        <label for="exampleInputEmail1">Event Name</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Sender Name</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Venue Name</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Venue Address</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                             placeholder="Enter email">
                     </div>
@@ -75,9 +89,36 @@
                 </form>
             </div>
             <div class="col-sm-6">
-                One of two columns
+                INSERT TEMPLATE HERE
             </div>
         </div>
     </div>
 
-</body>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    TOAST
+                </div>
+                <div class="col-sm-3">
+                    
+                </div>
+                <div class="col-sm-6">
+                    One of three columns
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Javascript files -->
+    <script src="js/login.js"></script>
+
+    </body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+
+</html>
