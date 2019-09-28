@@ -4,6 +4,7 @@ form.login {
 }
 
 body {
+  font-family: 'Raleway', sans-serif;
   background: #151515;
 }
 
@@ -13,7 +14,6 @@ body {
   float: right;
   left: 49%;
   transform: translate(-50%, -50%);
-  font-family: 'Raleway', sans-serif;
   letter-spacing: 12px;
   font-weight: 700;
   margin: 30px;
@@ -43,7 +43,7 @@ body {
   background:  #151515;
   padding: 10px 60px;
   justify-content: space-between;
-  position: fixed;
+  position: sticky;
   width: 100%;
 }
 
@@ -75,11 +75,32 @@ h3 {
   padding: 10px;
 }
 
-.form {
-  margin: 50px auto;
-}
-
 #banner {
   padding: 100px 0 0 0;
 }
 
+
+
+/* rsvp styles */
+#rsvp-section {
+  background-color: white;
+  position: relative;
+}
+
+#placeholder-img {
+  height: 30%;
+}
+
+#section-header {
+  padding-right: 15px;
+  padding-left: 15px;
+  align-content: center;
+} 
+
+#submit-rsvp-btn {
+  display: inline-block;
+}
+
+.btn-row {
+  text-align: right;
+}
