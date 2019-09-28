@@ -3,7 +3,7 @@
 
 <head lang="en">
     <meta charset="UTF-8" />
-    <title>Toast</title>
+    <title>Invitation</title>
     <!-- reset.css -->
     <link rel="stylesheet" type="text/css" href="styles/reset.css" />
     <!-- bootstrap -->
@@ -55,82 +55,29 @@
             <a class="nav-link" href="#">Sign In</a>
         </li>
     </nav>
-
-    <!-- Landing Page -->
-    <div class="hero">
-        <h3 id="banner">Beautiful online invitations and RSVP tracking</h3>
-
-        <!--Banner Video-->
-        <div id="myVideo">
-            <video autoplay muted loop>
-                <source src="images/small.mp4" type="video/MP4">
-            </video>
-        </div>
-    </div>
-
-
-
-    <!-- Templates -->
-    <div class="templates">
-        <h2>Select a Template</h2>
-        <br>
-        <div class="row no-gutters">
-            <div class="col-sm-3 text-center">
-                <div class="card" style="width: 18rem;">
-                    <img src="images/template_1.png" class="card-img-top mx-auto d-block" alt="...">
-                </div>
+  
+  <!-- Form -->
+    <h2>Fill out your invitation</h2>
+    <div class="container form">
+        <div class="row">
+            <div class="col-sm-6">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Enter email">
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
             </div>
-            <div class="col-sm-3">
-                 <div class="card text-center" style="width: 18rem;">
-                     <img src="images/template_2.png" class="card-img-top mx-auto d-block" alt="...">
-                 </div>
-            </div>
-            <div class="col-sm-3 text-center">
-                <div class="card" style="width: 18rem;">
-                    <img src="images/template_3.png" class="card-img-top mx-auto d-block" alt="...">
-                </div>
-            </div>
-            <div class="col-sm-3 text-center">
-                <div class="card" style="width: 18rem;">
-                    <img src="images/template_4.png" class="card-img-top mx-auto d-block" alt="...">
-                </div>
-            </div>
-        </div>
-        <div class="row no-gutters">
-            <div class="col-sm-3 text-center">
-                <div class="card" style="width: 18rem;">
-                    <img src="images/template_5.png" class="card-img-top mx-auto d-block" alt="...">
-                </div>
-            </div>
-            <div class="col-sm-3 text-center">
-                <div class="card" style="width: 18rem;">
-                    <img src="images/template_6.png" class="card-img-top mx-auto d-block" alt="...">
-                </div>
-            </div>
-            <div class="col-sm-3 text-center">
-                <div class="card" style="width: 18rem;">
-                    <img src="images/template_7.png" class="card-img-top mx-auto d-block" alt="...">
-                </div>
-            </div>
-            <div class="col-sm-3 text-center">
-                <div class="card" style="width: 18rem;">
-                    <img src="images/template_8.png" class="card-img-top mx-auto d-block" alt="...">
-                </div>
+            <div class="col-sm-6">
+                One of two columns
             </div>
         </div>
     </div>
-
-
-
-
-
-
-    <!-- Javascript files -->
-    <script src="./assets/js/xxxx.js"></script>
 
 </body>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
-
-</html>
