@@ -6,6 +6,7 @@ form.login {
 body {
   font-family: 'Raleway', sans-serif;
   background: #151515;
+  font-family: 'Raleway', sans-serif;
 }
 
 #logo {
@@ -28,7 +29,7 @@ body {
 
 #myVideo video {
   display: block;
-  margin: 50px auto 0;
+  margin: 50px auto;
   object-fit: cover;
   text-align: center;
   width: 80%;
@@ -44,7 +45,12 @@ body {
   padding: 10px 60px;
   justify-content: space-between;
   position: sticky;
+<<<<<<< HEAD
+=======
+  top: 0;
+>>>>>>> master
   width: 100%;
+  z-index: 100;
 }
 
 
@@ -60,6 +66,7 @@ body {
   margin: 20px;
 }
 
+h2,
 h3 {
   text-align: center;
   color: #eee;
@@ -68,7 +75,7 @@ h3 {
 
 .hero {
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
 }
 
  .row {
@@ -104,3 +111,16 @@ h3 {
 .btn-row {
   text-align: right;
 }
+.form {
+  margin: 50px auto;
+}
+
+.templates {
+  margin: 80px 80px 80px 80px;
+}
+
+img {
+  align-content: center;
+}
+
+
