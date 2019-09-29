@@ -50,7 +50,10 @@ body {
   z-index: 100;
 }
 
-
+.btn-link, .btn-link:hover, .btn-link:active, .btn-link:visited, .btn-link:focus {
+  text-decoration: none;
+  color: white;
+}
 
 .dropdown-menu,
 .dropdown-item {

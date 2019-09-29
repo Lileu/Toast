@@ -16,14 +16,6 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/signup.html"));
   });
 
-  // Load login page
-  app.get("/login", function (req, res) {
-    if (req.user) {
-      res.redirect("/members");
-    }
-    res.sendFile(path.join(__dirname, "../public/login.html"));
-  });
-
   // Authentication route
   // If user has not logged in, will be redirected to signup page
   app.get("/members", isAuthenticated, function (req, res) {
