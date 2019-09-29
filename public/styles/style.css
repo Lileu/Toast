@@ -45,10 +45,7 @@ body {
   padding: 10px 60px;
   justify-content: space-between;
   position: sticky;
-<<<<<<< HEAD
-=======
   top: 0;
->>>>>>> master
   width: 100%;
   z-index: 100;
 }
@@ -72,6 +69,10 @@ h3 {
   text-align: center;
   color: #eee;
   font-family: 'Dancing Script', cursive;
+}
+
+h5 {
+  color: #eee;
 }
 
 .hero {
@@ -168,3 +169,10 @@ img {
   font-weight: bold;
 }
 
+label {
+  color: #eee;
+}
+
+.form {
+  margin: 80px 80px;
+}
