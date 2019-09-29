@@ -5,6 +5,10 @@ var bcrypt = require("bcryptjs");
 // Create user model
 module.exports = function (sequelize, DataTypes) {
   var User = sequelize.define("User", {
+    // userType: {
+    //   type: DataTypes.BOOLEAN,
+    //   allowNull: false
+    // },
     facebook_id: {
       type: DataTypes.STRING,
       allowNull: true,

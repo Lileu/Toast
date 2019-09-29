@@ -45,15 +45,15 @@ body {
   padding: 10px 60px;
   justify-content: space-between;
   position: sticky;
-<<<<<<< HEAD
-=======
   top: 0;
->>>>>>> master
   width: 100%;
   z-index: 100;
 }
 
-
+.btn-link, .btn-link:hover, .btn-link:active, .btn-link:visited, .btn-link:focus {
+  text-decoration: none;
+  color: white;
+}
 
 .dropdown-menu,
 .dropdown-item {
