@@ -84,10 +84,6 @@ h5 {
   padding: 10px;
 }
 
-#banner {
-  padding: 100px 0 0 0;
-}
-
 
 
 /* rsvp styles */
@@ -181,4 +177,8 @@ label {
 
 .form {
   margin: 80px 80px;
+}
+
+.field {
+  color: yellow;
 }
