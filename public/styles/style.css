@@ -45,10 +45,7 @@ body {
   padding: 10px 60px;
   justify-content: space-between;
   position: sticky;
-<<<<<<< HEAD
-=======
   top: 0;
->>>>>>> master
   width: 100%;
   z-index: 100;
 }
@@ -100,13 +97,19 @@ h3 {
 }
 
 #section-header {
-  padding-right: 15px;
-  padding-left: 15px;
-  align-content: center;
+  display: inline-block;
+  color: #151515;
+  margin-left: 10px;
+
 } 
 
 #submit-rsvp-btn {
   display: inline-block;
+  margin-right: 10px;
+}
+
+#rightside-panel {
+  text-align: left;
 }
 
 .btn-row {
