@@ -28,7 +28,8 @@ module.exports = function (app) {
   // Go to members page if logged in successfully
   app.post("/api/login", passport.authenticate("local"), function (req, res) {
     db.Example.create(req.body).then(function (dbExample) {
-      res.json("/members");
+      res.json("/");
+      // $("#signinbtn").hide();
     });
   });
 
@@ -40,7 +41,7 @@ module.exports = function (app) {
       email: req.body.email,
       password: req.body.password
     }).then(function () {
-      res.redirect(307, "/api/login");
+      res.redirect(307, "/");
     }).catch(function (error) {
       console.log(error);
       res.json(error);
@@ -53,7 +54,7 @@ module.exports = function (app) {
   // After authentication, will redirect the user.
   // Gets access token 
   app.get("/auth/facebook/callback", passport.authenticate("facebook", {
-    successRedirect: "/members",
+    successRedirect: "/",
     failureRedirect: "/api/signup"
   }));
 };
