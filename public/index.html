@@ -21,6 +21,11 @@
 </head>
 
 <body>
+    <div id="fb-root"></div>
+    <!-- Facebook SDK -->
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/en_AU/sdk.js#xfbml=1&version=v4.0&appId=381002012837289&autoLogAppEvents=1"></script>
+
     <!-- Link to Moment.js should go here -->
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
@@ -79,6 +84,9 @@
                                     <button type="submit" class="btn btn-default">Login</button>
                                 </form>
                                 <br />
+                                <div class="fb-login-button" data-width="" data-size="large"
+                                    data-button-type="login_with" data-auto-logout-link="false"
+                                    data-use-continue-as="false"></div>
                                 <p>Or sign up <a href="/">here</a></p>
                             </div>
                         </div>
@@ -92,7 +100,6 @@
         </div>
     </div>
 
-
     <!-- Landing Page -->
     <div class="hero">
         <h3 id="banner">Beautiful online invitations and RSVP tracking</h3>
@@ -104,8 +111,6 @@
             </video>
         </div>
     </div>
-
-
 
     <!-- Templates -->
     <div class="templates">
@@ -157,8 +162,6 @@
         </div>
     </div>
 
-
-
     <!-- Javascript files -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
@@ -170,6 +173,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
         </script>
+    <!-- Index.js -->
     <script src="js/index.js"></script>
 </body>
 
