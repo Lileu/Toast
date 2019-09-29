@@ -55,41 +55,68 @@
             <a class="nav-link" href="#">Sign In</a>
         </li>
     </nav>
-  
-  <!-- Form -->
+
+    <!-- Form -->
     <h2>Fill out your invitation</h2>
-    <div class="container form">
+    <div class="form">
         <div class="row">
             <div class="col-sm-6">
-                <form>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Event Name</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Enter email">
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-3 col-form-label">Event Name</label>
+                    <div class="col-9">
+                        <input class="form-control" type="text" value="Event Name" id="example-text-input">
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Sender Name</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-3 col-form-label">Sender Name</label>
+                    <div class="col-9">
+                        <input class="form-control" type="text" value="Sender Name" id="example-text-input">
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Venue Name</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-3 col-form-label">Venue Name</label>
+                    <div class="col-9">
+                        <input class="form-control" type="text" value="Venue Name" id="example-text-input">
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Venue Address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Enter email">
+                </div>
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-3 col-form-label">Venue Address</label>
+                    <div class="col-9">
+                        <input class="form-control" type="text" value="Venue Address" id="example-text-input">
                     </div>
-                    <div class="form-check">
+                </div>
+                <div class="form-group row">
+                    <label for="example-datetime-local-input" class="col-3 col-form-label">Date and Time</label>
+                    <div class="col-9">
+                        <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00"
+                            id="example-datetime-local-input">
+                    </div>
+                </div>
+                <!-- <div class="form-group row">
+                    <label for="example-datetime-local-input" class="col-3 col-form-label">Additional Guests</label>
+                    <div class="col-9">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        <label class="form-check-label" for="exampleCheck1">Additional Guests +1</label>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div> -->
+                <br>
+                <h5>Guest Details</h5>
+                <br>
+                <form class="form-inline">
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Guest Name">
+                    </div>
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Email">
+                    </div>
                 </form>
             </div>
             <div class="col-sm-6">
-                INSERT TEMPLATE HERE
+                <div class="col-sm-3 text-center">
+                    <div class="card mx-auto" style="width: 18rem;">
+                        <img src="images/template_9.png" class="card-img-top" alt="...">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -97,17 +124,13 @@
 
     <!-- Footer -->
     <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3">
-                    TOAST
-                </div>
-                <div class="col-sm-3">
-                    
-                </div>
-                <div class="col-sm-6">
-                    One of three columns
-                </div>
+        <div class="row no-gutters">
+            <div class="col-sm-3">
+                TOAST INC.
+            </div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-8">
+                About | Design | Blog | Careers | Affiliate | Privacy | Terms | Contact Us
             </div>
         </div>
     </div>
@@ -116,7 +139,7 @@
     <!-- Javascript files -->
     <script src="js/login.js"></script>
 
-    </body>
+</body>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
