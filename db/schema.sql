@@ -1,20 +1,21 @@
 DROP DATABASE IF EXISTS toast_db;
 CREATE DATABASE toast_db;
 
-CREATE TABLE guestlist;
+USE toast_DB;
+CREATE TABLE guestlist
 (	guest_id int NOT NULL AUTO_INCREMENT,
 	event_name varchar(50) NOT NULL,
-    sender BOOLEAN DEFAULT false,
+    sender varchar(50) NOT NULL,
     venue_name varchar(80) NOT NULL,
     venue_address varchar(150) NOT NULL,
-    date_time datetime(0); NOT NULL,
+    date_time datetime(0) NOT NULL,
     guest_name varchar(50) NOT NULL,
     guest_email varchar(50) NOT NULL,
 	PRIMARY KEY (guest_id)
 );
 
-CREATE TABLE rsvps;
-(	rsvp_id int,
+CREATE TABLE rsvps
+(	rsvp_id int NOT NULL AUTO_INCREMENT,
     guest_id int,  
     rsvp_status varchar(50) NOT NULL,
     plus_one BOOLEAN DEFAULT false NOT NULL,
@@ -25,3 +26,8 @@ CREATE TABLE rsvps;
     ON DELETE SET NULL
     ON UPDATE CASCADE
 );
+
+-- SELECT g.guest_name, g.guest_email, g.date_time, r.plus_one, r.rsvp_status 
+--     FROM guestlist g   
+--         JOIN rsvps r 
+--         ON g.guest_id = r.guest_id

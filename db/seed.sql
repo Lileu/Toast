@@ -1,3 +1,5 @@
+-- guestlist seed data
+
 INSERT INTO guestlist (
     event_name,
     sender,
@@ -5,15 +7,118 @@ INSERT INTO guestlist (
     venue_address,
     date_time,
     guest_name,
-    guest_email)
-VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');
+    guest_email
+    )
+VALUES (
+    'Jens 21st', 
+    'Jen Jones',
+    'Base Lounge & Bar',
+    'Selwyn Lane, Melbourne VIC',
+    '2019-12-21 18:30:00',
+    'Jonathan',
+    'JonJay@gmail.com'
+);
 
-     int NOT NULL AUTO_INCREMENT,
-	 varchar(50) NOT NULL,
-     BOOLEAN DEFAULT false,
-     varchar(80) NOT NULL,
-     varchar(150) NOT NULL,
-     datetime(0); NOT NULL,
-     varchar(50) NOT NULL,
-     varchar(50) NOT NULL,
-	PRIMARY KEY (guest_id)
+INSERT INTO guestlist (
+    event_name,
+    sender,
+    venue_name,
+    venue_address,
+    date_time,
+    guest_name,
+    guest_email
+    )
+VALUES (
+    'Jens 21st', 
+    'Jen Jones',
+    'Base Lounge & Bar',
+    'Selwyn Lane, Melbourne VIC',
+    '2019-12-21 18:30:00',
+    'Alison',
+    'A.Lison@gmail.com'
+    );
+
+INSERT INTO guestlist (
+    event_name,
+    sender,
+    venue_name,
+    venue_address,
+    date_time,
+    guest_name,
+    guest_email
+    )
+VALUES (
+    'Jens 21st', 
+    'Jen Jones',
+    'Base Lounge & Bar',
+    'Selwyn Lane, Melbourne VIC',
+    '2019-12-21 18:30:00',
+    'Matty',
+    'MattySmith@hotmail.com'
+    );
+
+INSERT INTO guestlist (
+    event_name,
+    sender,
+    venue_name,
+    venue_address,
+    date_time,
+    guest_name,
+    guest_email
+    )
+VALUES (
+    'Jens 21st', 
+    'Jen Jones',
+    'Base Lounge & Bar',
+    'Selwyn Lane, Melbourne VIC',
+    '2019-12-21 18:30:00',
+    'Shane',
+    'Shano@gmail.com'
+    );
+
+-- rsvp seed data
+
+INSERT INTO rsvps (
+    guest_id,
+    rsvp_status,
+    plus_one
+)
+VALUES (
+    '2', 
+    'attending',
+    0
+);
+
+
+INSERT INTO rsvps (
+    guest_id,
+    rsvp_status,
+    plus_one
+)
+VALUES (
+    '3', 
+    'attending',
+    1
+);
+
+INSERT INTO rsvps (
+    guest_id,
+    rsvp_status,
+    plus_one
+)
+VALUES (
+    '4', 
+    'attending',
+    0
+);
+
+INSERT INTO rsvps (
+    guest_id,
+    rsvp_status,
+    plus_one
+)
+VALUES (
+    '5', 
+    'not attending',
+    0
+);
