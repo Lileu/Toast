@@ -74,6 +74,10 @@ h3 {
   font-family: 'Dancing Script', cursive;
 }
 
+h5 {
+  color: #eee;
+}
+
 .hero {
   width: 100vw;
   height: 80vh;
@@ -81,10 +85,6 @@ h3 {
 
  .row {
   padding: 10px;
-}
-
-#banner {
-  padding: 100px 0 0 0;
 }
 
 
@@ -174,3 +174,14 @@ img {
   font-weight: bold;
 }
 
+label {
+  color: #eee;
+}
+
+.form {
+  margin: 80px 80px;
+}
+
+.field {
+  color: yellow;
+}
