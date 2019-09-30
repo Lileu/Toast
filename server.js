@@ -9,6 +9,11 @@ var db = require("./models");
 var app = express();
 var PORT = process.env.PORT || 3000;
 
+// Setup handlebars for tracking page
+var exphbs = require('express-handlebars');
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
 // Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());

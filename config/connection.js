@@ -1,5 +1,3 @@
-// COPIED FROM BURGER PROJECT - NEEDS TO BE MODIFIED
-
 // MySQL connection setup
 var mysql = require("mysql");,
 
