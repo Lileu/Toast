@@ -36,7 +36,7 @@
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
-        <div class="menu" onclick="myFunction(this)">
+        <div class="menu" data-toggle="dropdown" onclick="myFunction(this)">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
@@ -103,14 +103,27 @@
                 <br>
                 <h5>Guest Details</h5>
                 <br>
-                <form class="form-inline">
-                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Guest Name">
+                    <div class="form-group">
+                        <div data-role="dynamic-fields">
+                            <div class="form-inline">
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control" id="field-name" placeholder="Guest Name">
+                                        <span>-</span>
+                                        <input type="text" class="form-control" id="field-name" placeholder="Guest Email">
+                                    </div>
+                                </div>
+                                <button class="btn btn-danger" data-role="remove">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </button>
+                                <button class="btn btn-primary" data-role="add">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div> 
                     </div>
-                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Email">
-                    </div>
-                </form>
+
+
             </div>
             <div class="col-sm-6">
             <img src="images/template_9.png" class="card-img-top" alt="...">
@@ -134,17 +147,20 @@
             <div class="col-sm-1"></div>
             <div class="col-sm-8">
                 About | Design | Blog | Careers | Affiliate | Privacy | Terms | Contact Us
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-pinterest"></i>
             </div>
         </div>
     </div>
 
 
     <!-- Javascript files -->
-    <script src="js/login.js"></script>
+    <script src="js/index.js"></script>
     </body>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/login.js"></script>
 <script>
     $("#event-name").keyup(function (event) {
     var stt = $(this).val();
@@ -166,6 +182,26 @@
     var stt = $(this).val();
     $("#text5").text(stt);
     });
+
+    
+    $(function() {
+    // Remove button click
+    $(document).on('click', '[data-role="dynamic-fields"] > .form-inline [data-role="remove"]', function(e) {
+        e.preventDefault();
+        $(this).closest('.form-inline').remove();
+    });
+    // Add button click
+    $(document).on('click', '[data-role="dynamic-fields"] > .form-inline [data-role="add"]', function(e) {
+        e.preventDefault();
+        var container = $(this).closest('[data-role="dynamic-fields"]');
+        new_field_group = container.children().filter('.form-inline:first-child').clone();
+        new_field_group.find('input').each(function(){
+            $(this).val('');
+        });
+        container.append(new_field_group);
+    });
+    });
+
 </script>
 
 </html>

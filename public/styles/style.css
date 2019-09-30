@@ -185,3 +185,41 @@ label {
 .field {
   color: yellow;
 }
+
+[data-role="dynamic-fields"]>.form-inline+.form-inline {
+  margin-top: 0.5em;
+}
+
+[data-role="dynamic-fields"]>.form-inline [data-role="add"] {
+  display: none;
+}
+
+[data-role="dynamic-fields"]>.form-inline:last-child [data-role="add"] {
+  display: inline-block;
+}
+
+[data-role="dynamic-fields"]>.form-inline:last-child [data-role="remove"] {
+  display: none;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  color: white;
+}
+
+#signinbtn {
+  margin: 20px;
+}
+
+i {
+  padding: 3px;
+}
+
+.fa-facebook {
+  padding-left: 20px;
+}
