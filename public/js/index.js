@@ -90,7 +90,9 @@ $(document).ready(function () {
       $(".member-name").text(data.email);
    });
 
-   function myFunction(x) {
-      x.classList.toggle("change");
-   }
 })
+
+// Burger Menu 
+function myFunction(x) {
+   x.classList.toggle("change");
+}
