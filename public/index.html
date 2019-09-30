@@ -9,14 +9,6 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-    <!-- Bootstrap CDN js -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
-    <!-- Bootstrap CDN Popper.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
     <!-- style.css -->
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
     <link rel="stylesheet" href="assets/css/animations.css" type="text/css">
@@ -26,35 +18,90 @@
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/57944e1645.js"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 
 <body>
+    <!-- <div id="fb-root"></div> -->
+    <!-- Facebook SDK -->
+    <!-- <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/en_AU/sdk.js#xfbml=1&version=v4.0&appId=381002012837289&autoLogAppEvents=1"></script> -->
+
     <!-- Link to Moment.js should go here -->
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
-            <div class="menu" onclick="myFunction(this)">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-            </div>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Wedding</a>
-                <a class="dropdown-item" href="#">Anniversary</a>
-                <a class="dropdown-item" href="#">Birthday</a>
-                <a class="dropdown-item" href="#">Engagement</a>
-                <a class="dropdown-item" href="#">Hen's</a>
-                <a class="dropdown-item" href="#">Buck's</a>
-                <a class="dropdown-item" href="#">Christening</a>
-                <a class="dropdown-item" href="#">Baby Shower</a>
-            </div>
+        <div class="menu" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Wedding</a>
+            <a class="dropdown-item" href="#">Anniversary</a>
+            <a class="dropdown-item" href="#">Birthday</a>
+            <a class="dropdown-item" href="#">Engagement</a>
+            <a class="dropdown-item" href="#">Hen's</a>
+            <a class="dropdown-item" href="#">Buck's</a>
+            <a class="dropdown-item" href="#">Christening</a>
+            <a class="dropdown-item" href="#">Baby Shower</a>
+        </div>
         </li>
         <h1 id="logo">TOAST</h1>
         <li class="nav-item" id="sign-in">
-            <a class="nav-link" href="#">Sign In</a>
+            <button class="btn btn-link" id="signinbtn" data-toggle="modal" data-target="#signinmodal" href="#">Sign
+                In</button>
         </li>
     </nav>
+
+    <!-- Modal goes here -->
+    <!-- Modal -->
+    <div class="modal fade" id="signinmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Login to Toast</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3">
+                                <h2>Login Form</h2>
+                                <form class="login">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Email address</label>
+                                        <input type="email" class="form-control" id="email-input" placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Password</label>
+                                        <input type="password" class="form-control" id="password-input"
+                                            placeholder="Password">
+                                    </div>
+                                    <button type="submit" class="btn btn-default">Login</button>
+                                </form>
+                                <br />
+                                <p><i class="fab fa-facebook-square"></i><a href="/auth/facebook"> Login via
+                                        Facebook</a></p>
+                                <!-- <div class="fb-login-button" href="/auth/facebook" data-width="" data-size="large"
+                                    data-button-type="login_with" data-auto-logout-link="false"
+                                    data-use-continue-as="false"></div> -->
+                                <p>Or sign up <a href="signup.html">here</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-info">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Landing Page -->
     <div class="hero">
@@ -68,58 +115,61 @@
         </div>
     </div>
 
-
-    <!-- Templates -->
-    <div class="templates">
-        <h2>Select a Template</h2>
-        <br>
-        <div class="row no-gutters">
-            <div class="col-sm-3">
-                <div class="card mx-auto" style="width: 18rem;">
-                    <img src="images/template_1.png" class="card-img-top" alt="...">
+    <<<<<<< HEAD=======>>>>>>> modal
+        <!-- Templates -->
+        <div class="templates">
+            <h2>Select a Template</h2>
+            <br>
+            <div class="row no-gutters">
+                <div class="col-sm-3">
+                    <div class="card mx-auto" style="width: 18rem;">
+                        <img src="images/template_1.png" class="card-img-top" alt="...">
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card mx-auto" style="width: 18rem;">
+                        <img src="images/template_2.png" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card text-center" style="width: 18rem;">
+                        <img src="images/template_2.png" class="card-img-top mx-auto d-block" alt="...">
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card mx-auto" style="width: 18rem;">
+                        <img src="images/template_3.png" class="card-img-top" alt="...">
+                    </div>
+                </div>
+                <div class="col-sm-3 ">
+                    <div class="card mx-auto" style="width: 18rem;">
+                        <img src="images/template_4.png" class="card-img-top" alt="...">
+                    </div>
                 </div>
             </div>
-            <div class="col-sm-3">
-                 <div class="card mx-auto" style="width: 18rem;">
-                     <img src="images/template_2.png" class="card-img-top" alt="...">
-                 </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="card mx-auto" style="width: 18rem;">
-                    <img src="images/template_3.png" class="card-img-top" alt="...">
+            <div class="row no-gutters">
+                <div class="col-sm-3 text-center">
+                    <div class="card mx-auto" style="width: 18rem;">
+                        <img src="images/template_5.png" class="card-img-top" alt="...">
+                    </div>
                 </div>
-            </div>
-            <div class="col-sm-3 ">
-                <div class="card mx-auto" style="width: 18rem;">
-                    <img src="images/template_4.png" class="card-img-top" alt="...">
+                <div class="col-sm-3 text-center">
+                    <div class="card mx-auto" style="width: 18rem;">
+                        <img src="images/template_6.png" class="card-img-top" alt="...">
+                    </div>
+                </div>
+                <div class="col-sm-3 text-center">
+                    <div class="card mx-auto" style="width: 18rem;">
+                        <img src="images/template_7.png" class="card-img-top" alt="...">
+                    </div>
+                </div>
+                <div class="col-sm-3 text-center">
+                    <div class="card mx-auto" style="width: 18rem;">
+                        <img src="images/template_8.png" class="card-img-top" alt="...">
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row no-gutters">
-            <div class="col-sm-3 text-center">
-                <div class="card mx-auto" style="width: 18rem;">
-                    <img src="images/template_5.png" class="card-img-top" alt="...">
-                </div>
-            </div>
-            <div class="col-sm-3 text-center">
-                <div class="card mx-auto" style="width: 18rem;">
-                    <img src="images/template_6.png" class="card-img-top" alt="...">
-                </div>
-            </div>
-            <div class="col-sm-3 text-center">
-                <div class="card mx-auto" style="width: 18rem;">
-                    <img src="images/template_7.png" class="card-img-top" alt="...">
-                </div>
-            </div>
-            <div class="col-sm-3 text-center">
-                <div class="card mx-auto" style="width: 18rem;">
-                    <img src="images/template_8.png" class="card-img-top" alt="...">
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Footer -->
+        <!-- Footer -->
         <div class="footer">
             <div class="row no-gutters">
                 <div class="col-sm-3">
@@ -132,13 +182,20 @@
             </div>
         </div>
 
-
-    <!-- Javascript files -->
-    <script src="js/login.js"></script>
-
+        <!-- Javascript files -->
+        <script src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <!-- Bootstrap CDN Popper.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+            </script>
+        <!-- Bootstrap CDN js -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+            </script>
+        <!-- Index.js -->
+        <script src="js/index.js"></script>
 </body>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
 
 </html>
