@@ -1,22 +1,40 @@
 $(document).ready(function () {
   $("#sign-in").on("click", function (event) {
     event.preventDefault();
-    $("signinmodal").modal("show");
+    $("#signinmodal").modal("show");
   });
 
   $("#sign-up").on("click", function (event) {
     event.preventDefault();
-    $("signupnmodal").modal("show");
-  });
-
-  $.get("/api/user_data", function (res) {
-    if (user.email !== null || user.id !== null) {
+    console.log("clicked");
+    $("#signinmodal").modal("hide");
+    $("#signupmodal").modal("show");
+    var isUserLoggedIn = userloggedin();
+    if (isUserLoggedIn) {
+      console.log("loggedin")
       $("#signinbtn").hide();
     }
-    console.log(res);
   });
+
+  // $("#fblogin").on("click", function (event) {
+  //   event.preventDefault();
+  //   return;
+  //   //userloggedin();
+  // });
+
 });
 
+function userloggedin() {
+
+  $.get("/api/user_data").then(function (user) {
+    if (user.id !== undefined) {
+      console.log("logged in")
+      $("#signinbtn").hide();
+    }
+  });
+}
+
+userloggedin()
 // LOGIN HERE
 // Getting references to our form and inputs
 var loginForm = $("form.login");
@@ -86,7 +104,8 @@ function signUpUser(email, password) {
     password: password
   }).then(function (data) {
     window.location.replace(data);
-    // $("#signinbtn").hide();
+    $("#signinbtn").hide();
+    console.log("clicked");
     // If there's an error, handle it by throwing up a boostrap alert
   }).catch(handleLoginErr);
 }

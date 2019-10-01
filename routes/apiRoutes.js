@@ -10,10 +10,11 @@ module.exports = function (app) {
       res.json({});
     }
     else {
+      console.log("****");
       // If logged in, sends back user's email and id
       res.json({
         email: req.user.email,
-        id: req.user.redirect
+        id: req.user.id
       });
     }
   });
@@ -29,7 +30,6 @@ module.exports = function (app) {
   app.post("/api/login", passport.authenticate("local"), function (req, res) {
     db.Example.create(req.body).then(function () {
       res.json("/");
-      // $("#signinbtn").hide();
     });
   });
 

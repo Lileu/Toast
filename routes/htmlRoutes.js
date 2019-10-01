@@ -18,9 +18,13 @@ module.exports = function (app) {
 
   // Authentication route
   // If user has not logged in, will be redirected to signup page
-  app.get("/", isAuthenticated, function (req, res) {
+  app.get("/invitation", isAuthenticated, function (req, res) {
     res.sendFile(path.join(__dirname, "../public/invitation.html"));
+  });
+  app.get("/rsvp", isAuthenticated, function (req, res) {
     res.sendFile(path.join(__dirname, "../public/rsvp.html"));
+  });
+  app.get("/tracking", isAuthenticated, function (req, res) {
     res.sendFile(path.join(__dirname, "../public/tracking.html"));
   });
 };
