@@ -14,7 +14,7 @@ else {
     password: "root",
     database: "toast_db"
   });
-};
+}
 
 // Establish connection
 connection.connect(function (err) {

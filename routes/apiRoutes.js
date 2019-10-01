@@ -14,7 +14,7 @@ module.exports = function (app) {
       res.json({
         email: req.user.email,
         id: req.user.redirect
-      })
+      });
     }
   });
 
@@ -45,8 +45,8 @@ module.exports = function (app) {
     }).catch(function (error) {
       console.log(error);
       res.json(error);
-    })
-  })
+    });
+  });
 
   // Facebook authentication
   app.get("/auth/facebook", passport.authenticate("facebook"));
