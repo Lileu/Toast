@@ -4,6 +4,11 @@ $(document).ready(function () {
     $("signinmodal").modal("show");
   });
 
+  $("#sign-up").on("click", function (event) {
+    event.preventDefault();
+    $("signupnmodal").modal("show");
+  });
+
   // LOGIN HERE
   // Getting references to our form and inputs
   var loginForm = $("form.login");

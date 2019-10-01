@@ -27,7 +27,7 @@ module.exports = function (app) {
   // Use passport.authenticate middleware with local strategy
   // Go to members page if logged in successfully
   app.post("/api/login", passport.authenticate("local"), function (req, res) {
-    db.Example.create(req.body).then(function (dbExample) {
+    db.Example.create(req.body).then(function () {
       res.json("/");
       // $("#signinbtn").hide();
     });
