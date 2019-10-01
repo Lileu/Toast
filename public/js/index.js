@@ -92,6 +92,9 @@ $(document).ready(function () {
 
 })
 
+// If user has been logged in and redirected
+
+
 // Burger Menu 
 function myFunction(x) {
    x.classList.toggle("change");

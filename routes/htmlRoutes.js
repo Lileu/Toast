@@ -11,14 +11,14 @@ module.exports = function (app) {
   // Load members page if user has logged in
   app.get("/", function (req, res) {
     if (req.user) {
-      res.redirect("/members");
+      res.redirect("/");
     }
     res.sendFile(path.join(__dirname, "../public/signup.html"));
   });
 
   // Authentication route
   // If user has not logged in, will be redirected to signup page
-  app.get("/members", isAuthenticated, function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/members.html"));
+  app.get("/", isAuthenticated, function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 };
