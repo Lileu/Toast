@@ -1,5 +1,5 @@
 // MySQL connection setup
-var mysql = require("mysql");,
+var mysql = require("mysql");
 
 // If the server contains the JAWSDB_URL environmental variable, it	connects to	the	JawsDB database.
 if (process.env.JAWDB_URL) {
