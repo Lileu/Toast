@@ -11,7 +11,7 @@ module.exports = {
   "test": {
     "username": "root",
     "password": process.env.LOCALHOSTPASSWORD,
-    "database": "testdb",
+    "database": "toast_db",
     "host": "localhost",
     "dialect": "mysql",
     "logging": false
@@ -20,4 +20,4 @@ module.exports = {
     "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
   }
-}
+};
