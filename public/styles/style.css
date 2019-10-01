@@ -223,3 +223,30 @@ i {
 .fa-facebook {
   padding-left: 20px;
 }
+
+#InvWrapper {
+  position: relative;
+  width: 36vw;
+  height: 47vw;
+}
+
+#InvWrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+#InvWrapper .field {
+  position: absolute;
+  z-index: 2;
+}
+
+#InvWrapper #text1 {
+  top: 32%;
+  left: 50%;
+  color: #111;
+  transform: translateX(-50%);
+}
