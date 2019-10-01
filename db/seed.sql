@@ -2,12 +2,9 @@
 
 INSERT INTO guestlist (
     event_name,
-    sender,
-    venue_name,
-    venue_address,
-    date_time,
     guest_name,
     guest_email
+    date_sent,
     )
 VALUES (
     'Jens 21st', 
