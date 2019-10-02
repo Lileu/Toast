@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  $("#logoutbtn").hide();
   $("#sign-in").on("click", function (event) {
     event.preventDefault();
     $("#signinmodal").modal("show");
@@ -11,11 +12,19 @@ $(document).ready(function () {
     $("#signupmodal").modal("show");
     var isUserLoggedIn = userloggedin();
     if (isUserLoggedIn) {
-      console.log("loggedin")
+      console.log("loggedin");
       $("#signinbtn").hide();
+      $("#logoutbtn").show();
     }
   });
 
+  $("#logoutbtn").on("click", function (res) {
+    // event.preventDefault();
+    alert("You have logged out successfully");
+    $("#logoutbtn").hidey();
+    // window.location.reload();
+    res.json("/");
+  });
   // $("#fblogin").on("click", function (event) {
   //   event.preventDefault();
   //   return;
@@ -30,6 +39,7 @@ function userloggedin() {
     if (user.id !== undefined) {
       console.log("logged in")
       $("#signinbtn").hide();
+      $("#logoutbtn").show();
     }
   });
 }
@@ -61,7 +71,7 @@ loginForm.on("submit", function (event) {
 
 // loginUser does a post to our "/" route and if successful, redirects us the the members page
 function loginUser(email, password) {
-  $.post("/", {
+  $.post("/invitation", {
     email: email,
     password: password
   }).then(function (data) {
