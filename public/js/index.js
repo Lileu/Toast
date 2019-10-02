@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  $("#logoutbtn").hide();
   $("#sign-in").on("click", function (event) {
     event.preventDefault();
     $("#signinmodal").modal("show");
@@ -13,6 +14,7 @@ $(document).ready(function () {
     if (isUserLoggedIn) {
       console.log("loggedin")
       $("#signinbtn").hide();
+      $("#logoutbtn").show();
     }
   });
 
@@ -30,6 +32,7 @@ function userloggedin() {
     if (user.id !== undefined) {
       console.log("logged in")
       $("#signinbtn").hide();
+      $("#logoutbtn").show();
     }
   });
 }
