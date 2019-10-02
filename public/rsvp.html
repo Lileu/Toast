@@ -12,11 +12,11 @@
     <!-- Bootstrap CDN js -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+        </script>
     <!-- Bootstrap CDN Popper.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
+        </script>
     <!-- style.css -->
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
     <link rel="stylesheet" href="assets/css/animations.css" type="text/css">
@@ -53,7 +53,9 @@
         </li>
         <h1 id="logo">TOAST</h1>
         <li class="nav-item" id="sign-in">
-            <a class="nav-link" href="#">Sign In</a>
+            <button class="btn btn-link" id="signinbtn" data-toggle="modal" data-target="#signinmodal" href="#">Sign
+                In</button>
+            <button class="btn btn-link" id="logoutbtn" href="#">Log Out</button>
         </li>
     </nav>
 
@@ -71,7 +73,7 @@
 
             <!-- rsvp section -->
             <div class="col-sm-6" id="rightside-panel">
-                    <h2 id=section-header>RSVP</h2><br><br>
+                <h2 id=section-header>RSVP</h2><br><br>
 
                 <fieldset class="form-group">
                     <div class="row">
@@ -130,7 +132,7 @@
                 <div class="btn-row">
                     <button type="button" class="btn btn-dark" id="submit-rsvp-btn">Submit</button>
                 </div>
-                </div>
+            </div>
         </div>
     </div>
     </div>
