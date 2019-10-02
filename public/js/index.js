@@ -12,7 +12,7 @@ $(document).ready(function () {
     $("#signupmodal").modal("show");
     var isUserLoggedIn = userloggedin();
     if (isUserLoggedIn) {
-      console.log("loggedin")
+      console.log("loggedin");
       $("#signinbtn").hide();
       $("#logoutbtn").show();
     }
@@ -21,7 +21,7 @@ $(document).ready(function () {
   $("#logoutbtn").on("click", function (res) {
     // event.preventDefault();
     alert("You have logged out successfully");
-    $("#logoutbtn").hide();
+    $("#logoutbtn").hidey();
     // window.location.reload();
     res.json("/");
   });
@@ -71,7 +71,7 @@ loginForm.on("submit", function (event) {
 
 // loginUser does a post to our "/" route and if successful, redirects us the the members page
 function loginUser(email, password) {
-  $.post("/", {
+  $.post("/invitation", {
     email: email,
     password: password
   }).then(function (data) {
