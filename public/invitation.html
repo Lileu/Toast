@@ -12,11 +12,11 @@
     <!-- Bootstrap CDN js -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+        </script>
     <!-- Bootstrap CDN Popper.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
+        </script>
     <!-- style.css -->
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
     <link rel="stylesheet" href="assets/css/animations.css" type="text/css">
@@ -54,11 +54,13 @@
         </li>
         <h1 id="logo">TOAST</h1>
         <li class="nav-item" id="sign-in">
-            <a class="nav-link" href="#">Sign In</a>
+            <button class="btn btn-link" id="signinbtn" data-toggle="modal" data-target="#signinmodal" href="#">Sign
+                In</button>
+            <button class="btn btn-link" id="logoutbtn" href="#">Log Out</button>
         </li>
     </nav>
-  
-  <!-- Form -->
+
+    <!-- Form -->
     <h2>Fill out your invitation</h2>
     <div class="form">
         <div class="row">
@@ -68,7 +70,7 @@
                     <div class="col-9">
                         <input class="form-control" type="text" value="Event Name" id="event-name">
                     </div>
-                </div>    
+                </div>
                 <div class="form-group row">
                     <label for="example-text-input" class="col-3 col-form-label">Sender Name</label>
                     <div class="col-9">
@@ -103,25 +105,25 @@
                 <br>
                 <h5>Guest Details</h5>
                 <br>
-                    <div class="form-group">
-                        <div data-role="dynamic-fields">
-                            <div class="form-inline">
-                                <div class="form-group">
-                                    <div class="col-md-12">
-                                        <input type="text" class="form-control" id="field-name" placeholder="Guest Name">
-                                        <span>-</span>
-                                        <input type="text" class="form-control" id="field-name" placeholder="Guest Email">
-                                    </div>
+                <div class="form-group">
+                    <div data-role="dynamic-fields">
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" id="field-name" placeholder="Guest Name">
+                                    <span>-</span>
+                                    <input type="text" class="form-control" id="field-name" placeholder="Guest Email">
                                 </div>
-                                <button class="btn btn-danger" data-role="remove">
-                                    <span class="glyphicon glyphicon-remove"></span>
-                                </button>
-                                <button class="btn btn-primary" data-role="add">
-                                    <span class="glyphicon glyphicon-plus"></span>
-                                </button>
                             </div>
-                        </div> 
+                            <button class="btn btn-danger" data-role="remove">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                            <button class="btn btn-primary" data-role="add">
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </button>
+                        </div>
                     </div>
+                </div>
 
 
             </div>
@@ -134,9 +136,9 @@
                     <div class="field" id='text4'></div>
                     <div class="field" id='text5'></div>
                 </div>
-            
+
             </div>
-   
+
         </div>
     </div>
 
@@ -160,48 +162,48 @@
 
     <!-- Javascript files -->
     <script src="js/index.js"></script>
-    </body>
+</body>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
     $("#event-name").keyup(function (event) {
-    var stt = $(this).val();
-    $("#text1").text(stt);
+        var stt = $(this).val();
+        $("#text1").text(stt);
     });
     $("#sender-name").keyup(function (event) {
-    var stt = $(this).val();
-    $("#text2").text(stt);
+        var stt = $(this).val();
+        $("#text2").text(stt);
     });
     $("#venue-name").keyup(function (event) {
-    var stt = $(this).val();
-    $("#text3").text(stt);
+        var stt = $(this).val();
+        $("#text3").text(stt);
     });
     $("#venue-address").keyup(function (event) {
-    var stt = $(this).val();
-    $("#text4").text(stt);
+        var stt = $(this).val();
+        $("#text4").text(stt);
     });
     $("#date-time").keyup(function (event) {
-    var stt = $(this).val();
-    $("#text5").text(stt);
+        var stt = $(this).val();
+        $("#text5").text(stt);
     });
 
-    
-    $(function() {
-    // Remove button click
-    $(document).on('click', '[data-role="dynamic-fields"] > .form-inline [data-role="remove"]', function(e) {
-        e.preventDefault();
-        $(this).closest('.form-inline').remove();
-    });
-    // Add button click
-    $(document).on('click', '[data-role="dynamic-fields"] > .form-inline [data-role="add"]', function(e) {
-        e.preventDefault();
-        var container = $(this).closest('[data-role="dynamic-fields"]');
-        new_field_group = container.children().filter('.form-inline:first-child').clone();
-        new_field_group.find('input').each(function(){
-            $(this).val('');
+
+    $(function () {
+        // Remove button click
+        $(document).on('click', '[data-role="dynamic-fields"] > .form-inline [data-role="remove"]', function (e) {
+            e.preventDefault();
+            $(this).closest('.form-inline').remove();
         });
-        container.append(new_field_group);
-    });
+        // Add button click
+        $(document).on('click', '[data-role="dynamic-fields"] > .form-inline [data-role="add"]', function (e) {
+            e.preventDefault();
+            var container = $(this).closest('[data-role="dynamic-fields"]');
+            new_field_group = container.children().filter('.form-inline:first-child').clone();
+            new_field_group.find('input').each(function () {
+                $(this).val('');
+            });
+            container.append(new_field_group);
+        });
     });
 
 </script>
