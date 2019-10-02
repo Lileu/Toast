@@ -12,11 +12,11 @@
     <!-- Bootstrap CDN js -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+        </script>
     <!-- Bootstrap CDN Popper.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
+        </script>
     <!-- style.css -->
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
     <link rel="stylesheet" href="assets/css/animations.css" type="text/css">
@@ -54,16 +54,114 @@
         </li>
         <h1 id="logo">TOAST</h1>
         <li class="nav-item" id="sign-in">
-            <a class="nav-link" href="#">Sign In</a>
+            <button class="btn btn-link" id="signinbtn" data-toggle="modal" data-target="#signinmodal" href="#">Sign
+                In</button>
+            <button class="btn btn-link" id="logoutbtn" href="#">Log Out</button>
         </li>
     </nav>
-  
-<!-- Table -->
-<table class="table table-striped table-dark table-hover">
+
+    <!-- Modal goes here -->
+    <!-- Login Modal -->
+    <div class="modal fade" id="signinmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Login to Toast</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3">
+                                <h2>Login Form</h2>
+                                <form class="login">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Email address</label>
+                                        <input type="email" class="form-control" id="email-input" placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Password</label>
+                                        <input type="password" class="form-control" id="password-input"
+                                            placeholder="Password">
+                                    </div>
+                                    <button type="submit" class="btn btn-default">Login</button>
+                                </form>
+                                <br />
+                                <p><i class="fab fa-facebook-square"></i><a id="fblogin" href="/auth/facebook"> Login
+                                        via
+                                        Facebook</a></p>
+                                <!-- <div class="fb-login-button" href="/auth/facebook" data-width="" data-size="large"
+                                    data-button-type="login_with" data-auto-logout-link="false"
+                                    data-use-continue-as="false"></div> -->
+                                <p id="sign-up">Or sign up here</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-info">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal fade" id="signupmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Sign up to Toast</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3">
+                                <h2>Sign Up Form</h2>
+                                <form class="signup">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Email address</label>
+                                        <input type="email" class="form-control" id="email-input" placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Password</label>
+                                        <input type="password" class="form-control" id="password-input"
+                                            placeholder="Password">
+                                    </div>
+                                    <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                        <span class="sr-only">Error:</span> <span class="msg"></span>
+                                    </div>
+                                    <button type="submit" class="btn btn-default">Sign Up</button>
+                                </form>
+                                <br />
+                                <p>Or log in <a href="index.html">here</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-info">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Table -->
+    <table class="table table-striped table-dark table-hover">
         <thead>
             <tr>
                 <th>Guest name</th>
-                <th>Guest email</th>    
+                <th>Guest email</th>
                 <th>Date sent</th>
                 <th>Plus 1</th>
                 <th>Status</th>
@@ -96,30 +194,30 @@
 
     <!-- Javascript files -->
     <script src="js/login.js"></script>
-    </body>
+</body>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/login.js"></script>
 <script>
     $("#event-name").keyup(function (event) {
-    var stt = $(this).val();
-    $("#text1").text(stt);
+        var stt = $(this).val();
+        $("#text1").text(stt);
     });
     $("#sender-name").keyup(function (event) {
-    var stt = $(this).val();
-    $("#text2").text(stt);
+        var stt = $(this).val();
+        $("#text2").text(stt);
     });
     $("#venue-name").keyup(function (event) {
-    var stt = $(this).val();
-    $("#text3").text(stt);
+        var stt = $(this).val();
+        $("#text3").text(stt);
     });
     $("#venue-address").keyup(function (event) {
-    var stt = $(this).val();
-    $("#text4").text(stt);
+        var stt = $(this).val();
+        $("#text4").text(stt);
     });
     $("#date-time").keyup(function (event) {
-    var stt = $(this).val();
-    $("#text5").text(stt);
+        var stt = $(this).val();
+        $("#text5").text(stt);
     });
 </script>
 
