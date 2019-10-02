@@ -10,7 +10,7 @@ module.exports = function (app) {
       res.json({});
     }
     else {
-      console.log("****");
+      // console.log("****");
       // If logged in, sends back user's email and id
       res.json({
         email: req.user.email,
@@ -46,6 +46,12 @@ module.exports = function (app) {
       console.log(error);
       res.json(error);
     });
+  });
+
+  app.get("/logout", function (req, res) {
+    req.logout();
+    $("#logoutbtn").hide();
+    res.redirect("/");
   });
 
   // Facebook authentication

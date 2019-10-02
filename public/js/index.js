@@ -18,6 +18,13 @@ $(document).ready(function () {
     }
   });
 
+  $("#logoutbtn").on("click", function (res) {
+    // event.preventDefault();
+    alert("You have logged out successfully");
+    $("#logoutbtn").hide();
+    // window.location.reload();
+    res.json("/");
+  });
   // $("#fblogin").on("click", function (event) {
   //   event.preventDefault();
   //   return;
