@@ -64,15 +64,15 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class="form-group row">
-                    <label for="example-text-input" class="col-3 col-form-label">Event Name</label>
+                    <label for="example-text-input" class="col-3 col-form-label">Groom's Name</label>
                     <div class="col-9">
-                        <input class="form-control" type="text" value="Event Name" id="event-name">
+                        <input class="form-control" type="text" value="Event Name" id="groom-name">
                     </div>
                 </div>    
                 <div class="form-group row">
-                    <label for="example-text-input" class="col-3 col-form-label">Sender Name</label>
+                    <label for="example-text-input" class="col-3 col-form-label">Bride's Name</label>
                     <div class="col-9">
-                        <input class="form-control" type="text" value="Sender Name" id="sender-name">
+                        <input class="form-control" type="text" value="Sender Name" id="bride-name">
                     </div>
                 </div>
                 <div class="form-group row">
@@ -122,6 +122,8 @@
                             </div>
                         </div> 
                     </div>
+                    <br>
+                    <input class="btn btn-dark" type="submit" value="Submit">
 
 
             </div>
@@ -164,11 +166,11 @@
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
-    $("#event-name").keyup(function (event) {
+    $("#groom-name").keyup(function (event) {
     var stt = $(this).val();
     $("#text1").text(stt);
     });
-    $("#sender-name").keyup(function (event) {
+    $("#bride-name").keyup(function (event) {
     var stt = $(this).val();
     $("#text2").text(stt);
     });
