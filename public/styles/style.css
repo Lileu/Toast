@@ -286,3 +286,31 @@ i {
   color: #111;
   transform: translateX(-50%);
 }
+
+#exampleModalLongTitle{
+  font-family: 'Dancing Script',cursive;
+  font-size: 40px;
+  font-weight: bolder;
+  color: black;
+  text-align: center;
+}
+
+.h2-login {
+  font-family: 'Dancing Script',cursive;
+  font-size: 30px;
+  font-weight: bolder;
+  color: black; 
+}
+
+.authtext {
+  font-family: 'Dancing Script',cursive;
+  font-size: 20px;
+  font-weight: bolder;
+  color: black;
+}
+
+.hostrsvp {
+  font-family: 'Dancing Script', cursive;
+  font-size: 15px;
+  min-width: 100%;
+}

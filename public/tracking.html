@@ -28,6 +28,8 @@
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/57944e1645.js"></script>
+    <!-- Favicon -->
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
 </head>
 
 <body>
@@ -35,8 +37,9 @@
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
     <!-- Navbar -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
-        <div class="menu" onclick="myFunction(this)">
+        <div class="menu" data-toggle="dropdown" onclick="myFunction(this)">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
@@ -54,9 +57,9 @@
         </li>
         <h1 id="logo">TOAST</h1>
         <li class="nav-item" id="sign-in">
-            <button class="btn btn-link" id="signinbtn" data-toggle="modal" data-target="#signinmodal" href="#">Sign
-                In</button>
-            <!-- <button class="btn btn-link" id="logoutbtn" href="#">Log Out</button> -->
+            <!-- <button class="btn btn-link" id="signinbtn" data-toggle="modal" data-target="#signinmodal" href="#">Sign
+                In</button> -->
+            <a href="/logout" class="btn btn-link" id="logoutbtn" href="#">Log Out</a>
         </li>
     </nav>
 
@@ -197,7 +200,7 @@
 </body>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/login.js"></script>
+<script src="js/login.js"></script>
 <script>
     $("#event-name").keyup(function (event) {
         var stt = $(this).val();

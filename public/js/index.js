@@ -7,7 +7,7 @@ $(document).ready(function () {
 
   $("#sign-up").on("click", function (event) {
     event.preventDefault();
-    console.log("clicked");
+    // console.log("clicked");
     $("#signinmodal").modal("hide");
     $("#signupmodal").modal("show");
     var isUserLoggedIn = userloggedin();
@@ -18,13 +18,14 @@ $(document).ready(function () {
     }
   });
 
-  $("#logoutbtn").on("click", function (res) {
+  $("#logoutbtn").on("click", function () {
     // event.preventDefault();
-    alert("You have logged out successfully");
-    $("#logoutbtn").hidey();
+    // alert("You have logged out successfully");
+    // $("#logoutbtn").hide();
     // window.location.reload();
-    res.json("/");
+    userloggedout();
   });
+
   // $("#fblogin").on("click", function (event) {
   //   event.preventDefault();
   //   return;
@@ -32,6 +33,11 @@ $(document).ready(function () {
   // });
 
 });
+function userloggedout() {
+  $.get("/logout").then(function (res) {
+    res.json("/");
+  });
+}
 
 function userloggedin() {
 

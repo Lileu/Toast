@@ -28,6 +28,8 @@
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/57944e1645.js"></script>
+    <!-- Favicon -->
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
 </head>
 
 <body>
@@ -54,9 +56,9 @@
         </li>
         <h1 id="logo">TOAST</h1>
         <li class="nav-item" id="sign-in">
-            <button class="btn btn-link" id="signinbtn" data-toggle="modal" data-target="#signinmodal" href="#">Sign
-                In</button>
-            <button class="btn btn-link" id="logoutbtn" href="#">Log Out</button>
+            <!-- <button class="btn btn-link" id="signinbtn" data-toggle="modal" data-target="#signinmodal" href="#">Sign
+                In</button> -->
+            <a href="/logout" class="btn btn-link" id="logoutbtn" href="#">Log Out</a>
         </li>
     </nav>
 
@@ -165,31 +167,42 @@
                 <div class="form-group row">
                     <label for="example-text-input" class="col-3 col-form-label">Groom's Name</label>
                     <div class="col-9">
+
                         <input class="form-control" type="text" name="groom_name" placeholder="Groom Name" id="groom-name">
+
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="example-text-input" class="col-3 col-form-label">Bride's Name</label>
                     <div class="col-9">
+
                         <input class="form-control" type="text" name="brides_name" placeholder="Bride Name" id="bride-name">
+
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="example-text-input" class="col-3 col-form-label">Venue Name</label>
                     <div class="col-9">
+
                         <input class="form-control" type="text" name="venue_name" placeholder="Venue Name" id="venue-name">
+
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="example-text-input" class="col-3 col-form-label">Venue Address</label>
                     <div class="col-9">
+
                         <input class="form-control" type="text" name="venue_address" placeholder="Venue Address" id="venue-address">
+
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="example-datetime-local-input" class="col-3 col-form-label">Date and Time</label>
                     <div class="col-9">
+
                         <input class="form-control" type="datetime-local" name="date_time" value="2019-10-06T13:45:00" id="date-time">
+
+
                     </div>
                 </div>
                 <!-- <div class="form-group row">
@@ -207,9 +220,11 @@
                         <div class="form-inline">
                             <div class="form-group">
                                 <div class="col-md-12">
-                                    <input type="text" class="form-control" name="guest_name" id="field-name" placeholder="Guest Name">
+                                    <input type="text" class="form-control" name="guest_name" id="field-name"
+                                        placeholder="Guest Name">
                                     <span>-</span>
-                                    <input type="text" class="form-control" name="guest_email" id="field-name" placeholder="Guest Email">
+                                    <input type="text" class="form-control" name="guest_email" id="field-name"
+                                        placeholder="Guest Email">
                                 </div>
                             </div>
                             <button class="btn btn-danger" data-role="remove">
@@ -222,9 +237,32 @@
                     </div>
 
                     <br>
+
                     <input class="btn btn-dark" type="submit" value="Submit" id="submit-event">
+
+
+
+
+
+                    <!--                 </div>
+                <div class="col-sm-6">
+                    <div id="InvWrapper">
+                        <img src="images/template_9.png" class="card-img-top" alt="...">
+                        <div class="field" id='text1'></div>
+                        <div class="field" id='text2'></div>
+                        <div class="field" id='text3'></div>
+                        <div class="field" id='text4'></div>
+                        <div class="field" id='text5'></div>
+                    </div>
+
+                </div>
+
             </div>
-        </div>
+        </div> -->
+
+                </div>
+
+            </div>
             <div class="col-sm-6">
                 <div id="InvWrapper">
                     <img src="images/template_9.png" class="card-img-top" alt="...">
@@ -235,8 +273,10 @@
                     <div class="field" id='text5'></div>
                 </div>
             </div>
+
         </div>
      </div>
+
 
              <div class="alert alert-success">
                  Your invitations have been sent!
