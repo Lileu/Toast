@@ -3,6 +3,9 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var session = require("express-session");
 var passport = require("./config/passport");
+var rsvpRouter = require("./controllers/rsvpController");
+var invitationRouter = require("./controllers/invitationController");
+var trackingRouter = require("./controllers/trackingController");
 
 var db = require("./models");
 
@@ -23,6 +26,12 @@ app.use(express.static("public"));
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
+
+// Controllers/Routes
+app.use("/rsvp", rsvpRouter);
+app.use("/invitation", invitationRouter);
+app.use("/tracking", trackingRouter);
+
 
 // Routes
 require("./routes/apiRoutes")(app);

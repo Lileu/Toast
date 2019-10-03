@@ -9,7 +9,7 @@ CREATE TABLE eventDetails
     venueName varchar(50) NOT NULL,
     venueAddress varchar(80) NOT NULL,
     eventDate varchar(50) NOT NULL,
-	PRIMARY KEY (event_id)
+	PRIMARY KEY (eventId)
 );
 
 CREATE TABLE guestList
