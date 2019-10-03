@@ -90,18 +90,20 @@ h5 {
 
 
 /* rsvp styles */
+
 #rsvp-section {
-  background-color: white;
+  background:  #151515;
   position: relative;
+  color: #eee;
+
 }
 
 #placeholder-img {
-  height: 30%;
+  height: 35%;
 }
 
 #section-header {
   display: inline-block;
-  color: #151515;
   margin-left: 10px;
 
 } 

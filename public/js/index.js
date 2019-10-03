@@ -37,14 +37,14 @@ function userloggedin() {
 
   $.get("/api/user_data").then(function (user) {
     if (user.id !== undefined) {
-      console.log("logged in")
+      console.log("logged in");
       $("#signinbtn").hide();
       $("#logoutbtn").show();
     }
   });
 }
 
-userloggedin()
+userloggedin();
 // LOGIN HERE
 // Getting references to our form and inputs
 var loginForm = $("form.login");

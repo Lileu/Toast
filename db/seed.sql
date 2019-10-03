@@ -1,121 +1,72 @@
 -- guestlist seed data
 
-INSERT INTO guestlist (
-    event_name,
-    guest_name,
-    guest_email
-    date_sent,
-    )
+INSERT INTO eventDetails (
+    groomName,
+    brideName,
+    venueName,
+    venueAddress,
+    eventDate
+)
+
 VALUES (
-    'Jens 21st', 
-    'Jen Jones',
-    'Base Lounge & Bar',
-    'Selwyn Lane, Melbourne VIC',
-    '2019-12-21 18:30:00',
-    'Jonathan',
-    'JonJay@gmail.com'
+    'Mr Fantastic', 
+    'Sue Storm',
+    'The Carousel',
+    'Albert Park Lakes',
+    '2020-08-19 13:45:00'
 );
 
-INSERT INTO guestlist (
-    event_name,
-    sender,
-    venue_name,
-    venue_address,
-    date_time,
-    guest_name,
-    guest_email
-    )
-VALUES (
-    'Jens 21st', 
-    'Jen Jones',
-    'Base Lounge & Bar',
-    'Selwyn Lane, Melbourne VIC',
-    '2019-12-21 18:30:00',
-    'Alison',
-    'A.Lison@gmail.com'
-    );
-
-INSERT INTO guestlist (
-    event_name,
-    sender,
-    venue_name,
-    venue_address,
-    date_time,
-    guest_name,
-    guest_email
-    )
-VALUES (
-    'Jens 21st', 
-    'Jen Jones',
-    'Base Lounge & Bar',
-    'Selwyn Lane, Melbourne VIC',
-    '2019-12-21 18:30:00',
-    'Matty',
-    'MattySmith@hotmail.com'
-    );
-
-INSERT INTO guestlist (
-    event_name,
-    sender,
-    venue_name,
-    venue_address,
-    date_time,
-    guest_name,
-    guest_email
-    )
-VALUES (
-    'Jens 21st', 
-    'Jen Jones',
-    'Base Lounge & Bar',
-    'Selwyn Lane, Melbourne VIC',
-    '2019-12-21 18:30:00',
-    'Shane',
-    'Shano@gmail.com'
-    );
-
--- rsvp seed data
-
-INSERT INTO rsvps (
-    guest_id,
-    rsvp_status,
-    plus_one
+INSERT INTO guestList (	
+	guestName,
+    guestEmail,
+    rsvpStatus,
+    plusOne,
+    dateSent,
+    eventId
 )
+
 VALUES (
-    '2', 
-    'attending',
-    0
+    'Jen Jones',
+    'JenJones@gmail.com',
+    'Attending',
+    true,
+    '2019-12-21 18:30:00',
+    '1'
+);
+
+INSERT INTO guestList (	
+	guestName,
+    guestEmail,
+    rsvpStatus,
+    plusOne,
+    dateSent,
+    eventId
+)
+
+VALUES (
+    'Nick Morris',
+    'Nimo@gmail.com',
+    'Attending',
+    false,
+    '2019-12-21 18:30:00',
+    '1'
 );
 
 
-INSERT INTO rsvps (
-    guest_id,
-    rsvp_status,
-    plus_one
+INSERT INTO guestList (	
+	guestName,
+    guestEmail,
+    rsvpStatus,
+    plusOne,
+    dateSent,
+    eventId
 )
-VALUES (
-    '3', 
-    'attending',
-    1
-);
 
-INSERT INTO rsvps (
-    guest_id,
-    rsvp_status,
-    plus_one
-)
 VALUES (
-    '4', 
-    'attending',
-    0
-);
-
-INSERT INTO rsvps (
-    guest_id,
-    rsvp_status,
-    plus_one
-)
-VALUES (
-    '5', 
-    'not attending',
-    0
+    'Jason Jackson',
+    'Jaseeeeeeee@hotmail.com',
+    'Not attending',
+    false,
+    '2019-12-21 18:30:00',
+    '1'
 );
