@@ -10,7 +10,7 @@ else {
   connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
-    user: "host",
+    user: "root",
     password: "root",
     database: "toast_db"
   });
