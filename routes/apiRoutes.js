@@ -10,7 +10,7 @@ module.exports = function (app) {
       res.json({});
     }
     else {
-      console.log("****");
+      // console.log("****");
       // If logged in, sends back user's email and id
       res.json({
         email: req.user.email,
@@ -29,7 +29,7 @@ module.exports = function (app) {
   // Go to members page if logged in successfully
   app.post("/api/login", passport.authenticate("local"), function (req, res) {
     db.Example.create(req.body).then(function () {
-      res.json("/");
+      res.json("/invitation");
     });
   });
 
@@ -41,11 +41,17 @@ module.exports = function (app) {
       email: req.body.email,
       password: req.body.password
     }).then(function () {
-      res.redirect(307, "/");
+      res.redirect(307, "/invitation");
     }).catch(function (error) {
       console.log(error);
       res.json(error);
     });
+  });
+
+  app.get("/logout", function (req, res) {
+    req.logout();
+    $("#logoutbtn").hide();
+    res.redirect("/");
   });
 
   // Facebook authentication
@@ -54,7 +60,7 @@ module.exports = function (app) {
   // After authentication, will redirect the user.
   // Gets access token 
   app.get("/auth/facebook/callback", passport.authenticate("facebook", {
-    successRedirect: "/",
+    successRedirect: "/invitation",
     failureRedirect: "/api/signup"
   }));
 };
