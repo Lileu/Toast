@@ -5,13 +5,13 @@ var router = express.Router();
 // Import the model (tracking.js) to use its database functions.
 var invitation = require("../models1/invitation1.js/index.js");
 
-router.post("/api/eventDetails", function (req, res) {
+invitationRouter.post("/api/eventDetails", function (req, res) {
     invitation.create([ 
-        "grooms-name", 
-        "brides-name", 
-        "venue-name", 
-        "venue-address", 
-        "date-time"
+        "groomName", 
+        "brideName", 
+        "venueName", 
+        "venueAddress", 
+        "eventDate"
     ], [
         req.body.groom_name, 
         req.body.brides_name, 
@@ -25,16 +25,4 @@ router.post("/api/eventDetails", function (req, res) {
     });
 });
 
-
-// router.post("/api/cats", function (req, res) {
-//     cat.create([
-//         "name", "sleepy"
-//     ], [
-//         req.body.name, req.body.sleepy
-//     ], function (result) {
-//         // Send back the ID of the new quote
-//         res.json({
-//             id: result.insertId
-//         });
-//     });
-// });
+module.exports = invitationRouter;

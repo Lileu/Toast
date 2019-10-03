@@ -2,6 +2,7 @@ DROP DATABASE IF EXISTS toast_db;
 CREATE DATABASE toast_db;
 
 USE toast_DB;
+
 CREATE TABLE eventDetails
 (	eventId int NOT NULL AUTO_INCREMENT,
 	groomName varchar(50) NOT NULL,

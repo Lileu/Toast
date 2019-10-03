@@ -167,32 +167,42 @@
                 <div class="form-group row">
                     <label for="example-text-input" class="col-3 col-form-label">Groom's Name</label>
                     <div class="col-9">
-                        <input class="form-control" type="text" placeholder="Event Name" id="groom-name">
+
+                        <input class="form-control" type="text" name="groom_name" placeholder="Groom Name" id="groom-name">
+
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="example-text-input" class="col-3 col-form-label">Bride's Name</label>
                     <div class="col-9">
-                        <input class="form-control" type="text" placeholder="Sender Name" id="bride-name">
+
+                        <input class="form-control" type="text" name="brides_name" placeholder="Bride Name" id="bride-name">
+
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="example-text-input" class="col-3 col-form-label">Venue Name</label>
                     <div class="col-9">
-                        <input class="form-control" type="text" placeholder="Venue Name" id="venue-name">
+
+                        <input class="form-control" type="text" name="venue_name" placeholder="Venue Name" id="venue-name">
+
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="example-text-input" class="col-3 col-form-label">Venue Address</label>
                     <div class="col-9">
-                        <input class="form-control" type="text" placeholder="Venue Address" id="venue-address">
+
+                        <input class="form-control" type="text" name="venue_address" placeholder="Venue Address" id="venue-address">
+
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="example-datetime-local-input" class="col-3 col-form-label">Date and Time</label>
                     <div class="col-9">
-                        <input class="form-control" type="datetime-local" placeholder="2011-08-19T13:45:00"
-                            id="date-time">
+
+                        <input class="form-control" type="datetime-local" name="date_time" value="2019-10-06T13:45:00" id="date-time">
+
+
                     </div>
                 </div>
                 <!-- <div class="form-group row">
@@ -227,7 +237,9 @@
                     </div>
 
                     <br>
-                    <input class="btn btn-dark" type="submit" value="Submit">
+
+                    <input class="btn btn-dark" type="submit" value="Submit" id="submit-event">
+
 
 
 
@@ -249,6 +261,7 @@
         </div> -->
 
                 </div>
+
             </div>
             <div class="col-sm-6">
                 <div id="InvWrapper">
@@ -261,9 +274,13 @@
                 </div>
             </div>
 
-
         </div>
-    </div>
+     </div>
+
+
+             <div class="alert alert-success">
+                 Your invitations have been sent!
+             </div>
 
     <!-- Footer -->
     <div class="footer">
@@ -284,53 +301,10 @@
 
 
     <!-- Javascript files -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/index.js"></script>
-    <script src="js/invitation.js"></script>
+    <script src="/js/invitation.js"></script>
+    <script src="/js/invitation2.js"></script>
 </body>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>
-
-    $("#groom-name").keyup(function (event) {
-        var stt = $(this).val();
-        $("#text1").text(stt);
-    });
-    $("#bride-name").keyup(function (event) {
-        var stt = $(this).val();
-        $("#text2").text(stt);
-    });
-    $("#venue-name").keyup(function (event) {
-        var stt = $(this).val();
-        $("#text3").text(stt);
-    });
-    $("#venue-address").keyup(function (event) {
-        var stt = $(this).val();
-        $("#text4").text(stt);
-    });
-    $("#date-time").keyup(function (event) {
-        var stt = $(this).val();
-        $("#text5").text(stt);
-    });
-
-
-    $(function () {
-        // Remove button click
-        $(document).on('click', '[data-role="dynamic-fields"] > .form-inline [data-role="remove"]', function (e) {
-            e.preventDefault();
-            $(this).closest('.form-inline').remove();
-        });
-        // Add button click
-        $(document).on('click', '[data-role="dynamic-fields"] > .form-inline [data-role="add"]', function (e) {
-            e.preventDefault();
-            var container = $(this).closest('[data-role="dynamic-fields"]');
-            new_field_group = container.children().filter('.form-inline:first-child').clone();
-            new_field_group.find('input').each(function () {
-                $(this).val('');
-            });
-            container.append(new_field_group);
-        });
-    });
-
-</script>
 
 </html>
