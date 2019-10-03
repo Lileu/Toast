@@ -12,11 +12,11 @@
     <!-- Bootstrap CDN js -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+        </script>
     <!-- Bootstrap CDN Popper.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
+        </script>
     <!-- style.css -->
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
     <link rel="stylesheet" href="assets/css/animations.css" type="text/css">
@@ -34,22 +34,23 @@
 
 
     <!-- Landing Page -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Templates
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Wedding</a>
-                <a class="dropdown-item" href="#">Anniversary</a>
-                <a class="dropdown-item" href="#">Birthday</a>
-                <a class="dropdown-item" href="#">Engagement</a>
-                <a class="dropdown-item" href="#">Hen's</a>
-                <a class="dropdown-item" href="#">Buck's</a>
-                <a class="dropdown-item" href="#">Christening</a>
-                <a class="dropdown-item" href="#">Baby Shower</a>
-            </div>
+        <div class="menu" data-toggle="dropdown" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Wedding</a>
+            <a class="dropdown-item" href="#">Anniversary</a>
+            <a class="dropdown-item" href="#">Birthday</a>
+            <a class="dropdown-item" href="#">Engagement</a>
+            <a class="dropdown-item" href="#">Hen's</a>
+            <a class="dropdown-item" href="#">Buck's</a>
+            <a class="dropdown-item" href="#">Christening</a>
+            <a class="dropdown-item" href="#">Baby Shower</a>
+        </div>
         </li>
         <h1 id="logo">TOAST</h1>
         <li class="nav-item" id="sign-in">
@@ -162,7 +163,7 @@
         <div class="row">
             <!-- invitation template-->
             <div class="col-sm-6" id="leftside-panel">
-                <img src="/public/images/weddinginvitation.png" alt="placeholder" id="placeholder-img">
+                <img src="images/weddinginvitation.png" alt="placeholder" id="placeholder-img">
             </div>
 
             <!-- rsvp section -->
@@ -210,18 +211,17 @@
                     </div>
                 </fieldset>
                 <div class="form-group row">
-                        <legend class="col-form-label col-sm-4 pt-0">Dietary requirements</legend>
-                        <div class="col-sm-8">
-                            <input class="form-control" type="text" placeholder="e.g. vegan, halal..." id="dietary">
-                        </div>
+                    <legend class="col-form-label col-sm-4 pt-0">Dietary requirements</legend>
+                    <div class="col-sm-8">
+                        <input class="form-control" type="text" placeholder="e.g. vegan, halal..." id="dietary">
                     </div>
+                </div>
                 <div class="form-group">
                     <div class="row">
                         <legend class="col-form-label col-sm-4 pt-0">Add message</legend>
                         <div class="col-sm-8">
                             <textarea class="form-control" id="add-message"
-                                placeholder="Enter a personal message for the event holder"
-                                rows="6">
+                                placeholder="Enter a personal message for the event holder" rows="6">
                             </textarea>
                         </div>
                     </div>
@@ -235,10 +235,27 @@
             Your RSVP has been submitted succesfully!
         </div>
     </div>
-</body>
-<!-- Javascript files -->
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="../public/js/rsvp.js"></script>
+    <!-- Footer -->
+    <div class="footer">
+        <div class="row no-gutters">
+            <div class="col-sm-3">
+                TOAST INC.
+            </div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-8">
+                About | Design | Blog | Careers | Affiliate | Privacy | Terms | Contact Us
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-pinterest"></i>
+            </div>
+        </div>
+    </div>
+    <!-- Javascript files -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/rsvp.js"></script>
+</body>
+
 
 </html>
