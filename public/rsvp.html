@@ -34,22 +34,23 @@
 
 
     <!-- Landing Page -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Templates
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Wedding</a>
-                <a class="dropdown-item" href="#">Anniversary</a>
-                <a class="dropdown-item" href="#">Birthday</a>
-                <a class="dropdown-item" href="#">Engagement</a>
-                <a class="dropdown-item" href="#">Hen's</a>
-                <a class="dropdown-item" href="#">Buck's</a>
-                <a class="dropdown-item" href="#">Christening</a>
-                <a class="dropdown-item" href="#">Baby Shower</a>
-            </div>
+        <div class="menu" data-toggle="dropdown" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Wedding</a>
+            <a class="dropdown-item" href="#">Anniversary</a>
+            <a class="dropdown-item" href="#">Birthday</a>
+            <a class="dropdown-item" href="#">Engagement</a>
+            <a class="dropdown-item" href="#">Hen's</a>
+            <a class="dropdown-item" href="#">Buck's</a>
+            <a class="dropdown-item" href="#">Christening</a>
+            <a class="dropdown-item" href="#">Baby Shower</a>
+        </div>
         </li>
         <h1 id="logo">TOAST</h1>
         <li class="nav-item" id="sign-in">
@@ -234,10 +235,27 @@
             Your RSVP has been submitted succesfully!
         </div>
     </div>
-</body>
-<!-- Javascript files -->
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="../public/js/rsvp.js"></script>
+    <!-- Footer -->
+    <div class="footer">
+        <div class="row no-gutters">
+            <div class="col-sm-3">
+                TOAST INC.
+            </div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-8">
+                About | Design | Blog | Careers | Affiliate | Privacy | Terms | Contact Us
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-pinterest"></i>
+            </div>
+        </div>
+    </div>
+    <!-- Javascript files -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/rsvp.js"></script>
+</body>
+
 
 </html>
