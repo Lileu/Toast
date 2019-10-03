@@ -2,6 +2,7 @@ DROP DATABASE IF EXISTS toast_db;
 CREATE DATABASE toast_db;
 
 USE toast_DB;
+
 CREATE TABLE eventDetails
 (	eventId int NOT NULL AUTO_INCREMENT,
 	groomName varchar(50) NOT NULL,
@@ -9,7 +10,7 @@ CREATE TABLE eventDetails
     venueName varchar(50) NOT NULL,
     venueAddress varchar(80) NOT NULL,
     eventDate varchar(50) NOT NULL,
-	PRIMARY KEY (event_id)
+	PRIMARY KEY (eventId)
 );
 
 CREATE TABLE guestList
