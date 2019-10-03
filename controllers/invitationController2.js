@@ -1,11 +1,12 @@
 var express = require("express");
 
-var router = express.Router();
+var invitationRouter2 = express.Router();
 
 // Import the model (tracking.js) to use its database functions.
-var invitation = require("../models1/invitation2.js/index.js");
+var invitation = require("../models1/invitation2.js");
 
-invitationRouter2.post("/api/guestList", function (req, res) {
+// Create all our routes and set up logic within those routes where required.
+invitationRouter2.post("/api/invitation2", function (req, res) {
     invitation.create([ 
         "guest_name", 
         "guest_email"
