@@ -74,8 +74,18 @@
                 <div class="modal-body">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-6 col-md-offset-3">
+                            <div class="col-md-6 offset-md-3">
                                 <h2 class="h2-login">Login Form</h2>
+                                <h4 class="hostrsvp">Are you a host or are you an attendee?</h4>
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-info active">
+                                        <input type="radio" name="options" id="option1" autocomplete="off" checked>
+                                        Host
+                                    </label>
+                                    <label class="btn btn-info">
+                                        <input type="radio" name="options" id="option2" autocomplete="off"> Attendee
+                                    </label>
+                                </div>
                                 <form class="login">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1" class="authtext">Email address</label>

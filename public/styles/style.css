@@ -308,3 +308,9 @@ i {
   font-weight: bolder;
   color: black;
 }
+
+.hostrsvp {
+  font-family: 'Dancing Script', cursive;
+  font-size: 15px;
+  min-width: 100%;
+}
