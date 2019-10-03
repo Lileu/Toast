@@ -1,12 +1,12 @@
 var express = require("express");
 
-var router = express.Router();
+var trackingRouter = express.Router();
 
 // Import the model (tracking.js) to use its database functions.
 var tracking = require("../models1/tracking.js");
 
 // Create all our routes and set up logic within those routes where required.
-router.get("/", function (req, res) {
+trackingRouter.get("/", function (req, res) {
   tracking.selectAll(function (data) {
     var hbsObject = {
       trackings: data
