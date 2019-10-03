@@ -230,6 +230,12 @@ i {
   position: relative;
   width: 36vw;
   height: 47vw;
+  font-family: 'Dancing Script',cursive;
+  font-size: 30px;
+}
+
+#text5 {
+  font-size: 20px;
 }
 
 #InvWrapper img {
@@ -248,6 +254,34 @@ i {
 
 #InvWrapper #text1 {
   top: 32%;
+  left: 50%;
+  color: #111;
+  transform: translateX(-50%);
+}
+
+#InvWrapper #text2 {
+  top: 43%;
+  left: 50%;
+  color: #111;
+  transform: translateX(-50%);
+}
+
+#InvWrapper #text3 {
+  top: 52%;
+  left: 50%;
+  color: #111;
+  transform: translateX(-50%);
+}
+
+#InvWrapper #text4 {
+  top: 57%;
+  left: 50%;
+  color: #111;
+  transform: translateX(-50%);
+}
+
+#InvWrapper #text5 {
+  top: 65%;
   left: 50%;
   color: #111;
   transform: translateX(-50%);
