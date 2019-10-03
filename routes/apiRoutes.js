@@ -39,7 +39,8 @@ module.exports = function (app) {
     console.log(req.body);
     db.User.create({
       email: req.body.email,
-      password: req.body.password
+      password: req.body.password,
+      userType: req.body.userType
     }).then(function () {
       res.redirect(307, "/invitation");
     }).catch(function (error) {

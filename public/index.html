@@ -54,7 +54,7 @@
         <li class="nav-item" id="sign-in">
             <button class="btn btn-link" id="signinbtn" data-toggle="modal" data-target="#signinmodal" href="#">Sign
                 In</button>
-            <button class="btn btn-link" id="logoutbtn" href="#">Log Out</button>
+            <a href="/logout" class="btn btn-link" id="logoutbtn" href="#">Log Out</a>
         </li>
     </nav>
 
@@ -74,8 +74,18 @@
                 <div class="modal-body">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-6 col-md-offset-3">
+                            <div class="col-md-6 offset-md-3">
                                 <h2 class="h2-login">Login Form</h2>
+                                <h4 class="hostrsvp">Are you a host or are you an attendee?</h4>
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-info active">
+                                        <input type="radio" name="options" id="option1" autocomplete="off" checked>
+                                        Host
+                                    </label>
+                                    <label class="btn btn-info">
+                                        <input type="radio" name="options" id="option2" autocomplete="off"> Attendee
+                                    </label>
+                                </div>
                                 <form class="login">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1" class="authtext">Email address</label>
@@ -89,7 +99,8 @@
                                     <button type="submit" class="btn btn-default">Login</button>
                                 </form>
                                 <br />
-                                <p><i class="fab fa-facebook-square"></i><a id="fblogin" href="/auth/facebook"> Login via Facebook</a></p>
+                                <p><i class="fab fa-facebook-square"></i><a id="fblogin" href="/auth/facebook"> Login
+                                        via Facebook</a></p>
                                 <!-- <div class="fb-login-button" href="/auth/facebook" data-width="" data-size="large"
                                     data-button-type="login_with" data-auto-logout-link="false"
                                     data-use-continue-as="false"></div> -->
