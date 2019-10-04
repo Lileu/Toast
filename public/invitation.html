@@ -145,38 +145,38 @@
 
     <!-- Form -->
     <h2>Fill out your invitation</h2>
-    <div class="form">
+    <form class="form" id="formGuestInvitation">
         <div class="row">
             <div class="col-sm-6">
                 <h5>Event Details</h5>
                 <div class="form-group row">
                     <label for="example-text-input" class="col-3 col-form-label">Groom's Name</label>
                     <div class="col-9">
-                        <input class="form-control" type="text" name="groom_name" placeholder="Groom Name" id="groom-name">
+                        <input class="form-control" type="text" name="groomName" placeholder="Groom Name" id="groom-name">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="example-text-input" class="col-3 col-form-label">Bride's Name</label>
                     <div class="col-9">
-                        <input class="form-control" type="text" name="brides_name" placeholder="Bride Name" id="bride-name">
+                        <input class="form-control" type="text" name="brideName" placeholder="Bride Name" id="bride-name">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="example-text-input" class="col-3 col-form-label">Venue Name</label>
                     <div class="col-9">
-                        <input class="form-control" type="text" name="venue_name" placeholder="Venue Name" id="venue-name">
+                        <input class="form-control" type="text" name="venueName" placeholder="Venue Name" id="venue-name">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="example-text-input" class="col-3 col-form-label">Venue Address</label>
                     <div class="col-9">
-                        <input class="form-control" type="text" name="venue_address" placeholder="Venue Address" id="venue-address">
+                        <input class="form-control" type="text" name="venueAddress" placeholder="Venue Address" id="venue-address">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="example-datetime-local-input" class="col-3 col-form-label">Date and Time</label>
                     <div class="col-9">
-                        <input class="form-control" type="datetime-local" name="date_time" value="2019-10-06T13:45:00" id="date-time">
+                        <input class="form-control" type="datetime-local" name="eventDate" value="2019-10-06T13:45:00" id="date-time">
                     </div>
                 </div>
                 <br>
@@ -187,10 +187,10 @@
                         <div class="form-inline">
                             <div class="form-group">
                                 <div class="col-md-12">
-                                    <input type="text" class="form-control" name="guest_name" id="field-name"
+                                    <input type="text" class="form-control" name="guestName[]" id="field-name"
                                         placeholder="Guest Name">
                                     <span>-</span>
-                                    <input type="text" class="form-control" name="guest_email" id="field-name"
+                                    <input type="text" class="form-control" name="guestEmail[]" id="field-name"
                                         placeholder="Guest Email">
                                 </div>
                             </div>
@@ -217,7 +217,7 @@
                 </div>
             </div>
         </div>
-     </div>
+    </form>
 
 <!-- Sucess banner -->
 <div class="alert alert-success">

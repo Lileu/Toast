@@ -26,3 +26,5 @@ CREATE TABLE guestList
     REFERENCES eventDetails(eventId)
     ON DELETE CASCADE
 );
+
+SELECT * FROM eventDetails

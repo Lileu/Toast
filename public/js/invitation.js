@@ -1,33 +1,47 @@
 $(document).ready(function () {
     $(".alert-success").hide();
-    $(function () {
-        $("#submit-event").on("click", function () {
-            var eventDetails = {
-                groomName: $("#groom-name").val(),
-                brideName: $("#bride-name").val(),
-                venueName: $("#venue-name").val(),
-                venueAddress: $("#venue-address").val(),
-                eventDate: $("#date-time").val(),
-            }
+    $('#formGuestInvitation').on('submit', onFormGuestInvitationSubmit);
+});
 
-            // Send the PUT request.
-            $.ajax("/api/invitation1/", {
-                type: "POST",
-                data: eventDetails
-            }).then(
-                function () {
-                    console.log(groomName);
-                    console.log(brideName);
-                    console.log(venueName);
-                    console.log(venueAddress);
-                    console.log(eventDate);
-                    location.reload();
-                }
-            );
-            $(".alert-success").show();
+function onFormGuestInvitationSubmit(event) {
+    event.preventDefault();
+
+    var formData = { guests: [] };
+    var fields = [
+        "groomName",
+        "brideName",
+        "venueName",
+        "venueAddress",
+        "eventDate"
+    ];
+
+    for (var i = 0; i < fields.length; i++) {
+        var el = $('[name="'+fields[i]+'"]');    
+        formData[fields[i]] = el.val();
+    }
+    
+    var guestNames = $('[name="guestName[]"]');
+    
+    guestNames.each(function() {
+        formData.guests.push({
+            name: $(this).val(),
+            email: $(this).parent().find('[name="guestEmail[]"]').val()
         });
     });
-});
+
+    // Send the PUT request.
+    $.ajax("/api/invitation1/", {
+        type: "POST",
+        data: formData
+    }).then(
+        function () {
+            // location.reload();
+        }
+    );
+
+    $(".alert-success").show();
+}
+
 
 $("#groom-name").keyup(function (event) {
     var stt = $(this).val();
