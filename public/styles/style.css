@@ -214,7 +214,8 @@ label {
   color: white;
 }
 
-#signinbtn {
+#signinbtn,
+#logoutbtn {
   margin: 20px;
 }
 

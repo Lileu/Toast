@@ -11,8 +11,8 @@ $(document).ready(function () {
             }
 
             // Send the PUT request.
-            $.ajax("/api/invitation/", {
-                type: "PUT",
+            $.ajax("/api/invitation1/", {
+                type: "POST",
                 data: eventDetails
             }).then(
                 function () {
@@ -21,6 +21,7 @@ $(document).ready(function () {
                     console.log(venueName);
                     console.log(venueAddress);
                     console.log(eventDate);
+                    location.reload();
                 }
             );
             $(".alert-success").show();
@@ -28,24 +29,24 @@ $(document).ready(function () {
     });
 });
 
-    $("#groom-name").keyup(function (event) {
-        var stt = $(this).val();
-        $("#text1").text(stt);
-    });
-    $("#bride-name").keyup(function (event) {
-        var stt = $(this).val();
-        $("#text2").text(stt);
-    });
-    $("#venue-name").keyup(function (event) {
-        var stt = $(this).val();
-        $("#text3").text(stt);
-    });
-    $("#venue-address").keyup(function (event) {
-        var stt = $(this).val();
-        $("#text4").text(stt);
-    });
-    $("#date-time").keyup(function (event) {
-        var stt = $(this).val();
-        $("#text5").text(stt);
-    });
+$("#groom-name").keyup(function (event) {
+    var stt = $(this).val();
+    $("#text1").text(stt);
+});
+$("#bride-name").keyup(function (event) {
+    var stt = $(this).val();
+    $("#text2").text(stt);
+});
+$("#venue-name").keyup(function (event) {
+    var stt = $(this).val();
+    $("#text3").text(stt);
+});
+$("#venue-address").keyup(function (event) {
+    var stt = $(this).val();
+    $("#text4").text(stt);
+});
+$("#date-time").keyup(function (event) {
+    var stt = $(this).val();
+    $("#text5").text(stt);
+});
 

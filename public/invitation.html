@@ -9,33 +9,21 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-    <!-- Bootstrap CDN js -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-        </script>
-    <!-- Bootstrap CDN Popper.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-        </script>
     <!-- style.css -->
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
     <link rel="stylesheet" href="assets/css/animations.css" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Quill -->
-    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/57944e1645.js"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <!-- Favicon -->
     <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
 </head>
 
 <body>
-    <!-- Link to Moment.js should go here -->
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
         <div class="menu" data-toggle="dropdown" onclick="myFunction(this)">
@@ -56,8 +44,7 @@
         </li>
         <h1 id="logo">TOAST</h1>
         <li class="nav-item" id="sign-in">
-            <!-- <button class="btn btn-link" id="signinbtn" data-toggle="modal" data-target="#signinmodal" href="#">Sign
-                In</button> -->
+            <!-- <button class="btn btn-link" id="signinbtn" data-toggle="modal" data-target="#signinmodal" href="#">Sign In</button> -->
             <a href="/logout" class="btn btn-link" id="logoutbtn" href="#">Log Out</a>
         </li>
     </nav>
@@ -92,9 +79,7 @@
                                     <button type="submit" class="btn btn-default">Login</button>
                                 </form>
                                 <br />
-                                <p><i class="fab fa-facebook-square"></i><a id="fblogin" href="/auth/facebook"> Login
-                                        via
-                                        Facebook</a></p>
+                                <p><i class="fab fa-facebook-square"></i><a id="fblogin" href="/auth/facebook"> Login via Facebook</a></p>
                                 <!-- <div class="fb-login-button" href="/auth/facebook" data-width="" data-size="large"
                                     data-button-type="login_with" data-auto-logout-link="false"
                                     data-use-continue-as="false"></div> -->
@@ -167,51 +152,33 @@
                 <div class="form-group row">
                     <label for="example-text-input" class="col-3 col-form-label">Groom's Name</label>
                     <div class="col-9">
-
                         <input class="form-control" type="text" name="groom_name" placeholder="Groom Name" id="groom-name">
-
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="example-text-input" class="col-3 col-form-label">Bride's Name</label>
                     <div class="col-9">
-
                         <input class="form-control" type="text" name="brides_name" placeholder="Bride Name" id="bride-name">
-
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="example-text-input" class="col-3 col-form-label">Venue Name</label>
                     <div class="col-9">
-
                         <input class="form-control" type="text" name="venue_name" placeholder="Venue Name" id="venue-name">
-
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="example-text-input" class="col-3 col-form-label">Venue Address</label>
                     <div class="col-9">
-
                         <input class="form-control" type="text" name="venue_address" placeholder="Venue Address" id="venue-address">
-
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="example-datetime-local-input" class="col-3 col-form-label">Date and Time</label>
                     <div class="col-9">
-
                         <input class="form-control" type="datetime-local" name="date_time" value="2019-10-06T13:45:00" id="date-time">
-
-
                     </div>
                 </div>
-                <!-- <div class="form-group row">
-                    <label for="example-datetime-local-input" class="col-3 col-form-label">Additional Guests</label>
-                    <div class="col-9">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Additional Guests +1</label>
-                    </div>
-                </div> -->
                 <br>
                 <h5>Guest Details</h5>
                 <br>
@@ -235,33 +202,9 @@
                             </button>
                         </div>
                     </div>
-
                     <br>
-
                     <input class="btn btn-dark" type="submit" value="Submit" id="submit-event">
-
-
-
-
-
-                    <!--                 </div>
-                <div class="col-sm-6">
-                    <div id="InvWrapper">
-                        <img src="images/template_9.png" class="card-img-top" alt="...">
-                        <div class="field" id='text1'></div>
-                        <div class="field" id='text2'></div>
-                        <div class="field" id='text3'></div>
-                        <div class="field" id='text4'></div>
-                        <div class="field" id='text5'></div>
-                    </div>
-
                 </div>
-
-            </div>
-        </div> -->
-
-                </div>
-
             </div>
             <div class="col-sm-6">
                 <div id="InvWrapper">
@@ -273,14 +216,13 @@
                     <div class="field" id='text5'></div>
                 </div>
             </div>
-
         </div>
      </div>
 
-
-             <div class="alert alert-success">
-                 Your invitations have been sent!
-             </div>
+<!-- Sucess banner -->
+<div class="alert alert-success">
+    Your invitations have been sent!
+</div>
 
     <!-- Footer -->
     <div class="footer">
@@ -303,8 +245,8 @@
     <!-- Javascript files -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/index.js"></script>
-    <script src="/js/invitation.js"></script>
-    <script src="/js/invitation2.js"></script>
+    <script src="js/invitation.js"></script>
+    <script src="js/invitation2.js"></script>
 </body>
 
 </html>
