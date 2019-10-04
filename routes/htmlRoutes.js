@@ -21,10 +21,10 @@ module.exports = function (app) {
   app.get("/invitation", isAuthenticated, function (req, res) {
     res.sendFile(path.join(__dirname, "../public/invitation.html"));
   });
-  app.get("/rsvp", isAuthenticated, function (req, res) {
+  app.get("/rsvp/:guestId", isAuthenticated, function (req, res) {
     res.sendFile(path.join(__dirname, "../public/rsvp.html"));
   });
-  app.get("/tracking", isAuthenticated, function (req, res) {
+  app.get("/tracking/:eventId", isAuthenticated, function (req, res) {
     res.sendFile(path.join(__dirname, "../public/tracking.html"));
   });
 };

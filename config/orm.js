@@ -28,6 +28,20 @@ function objToSql(ob) {
 
 // Object for all SQL statement functions
 var orm = {
+
+  selectWhere: function(table, condition, cb) {
+    var queryString = "SELECT * FROM " + table + " WHERE " + condition + ";";
+
+    console.log(queryString);
+
+    connection.query(queryString, function (err, res) {
+      if (err) {
+        throw err;
+      }
+      cb(res);
+    });
+  },
+
   selectAll: function(table, cb) {
     var queryString = "SELECT * FROM " + table + ";";
 
