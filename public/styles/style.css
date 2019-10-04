@@ -315,3 +315,7 @@ i {
   font-size: 15px;
   min-width: 100%;
 }
+
+#tracking-table {
+  min-height: calc(100vh - 148px - 88px);
+}

@@ -3,7 +3,7 @@ $(document).ready(function () {
   $(function () {
     $("#submit-rsvp-btn").on("click", function () {
       // hardcoded guest id 
-      var id = 3;
+      var id = window.location.pathname.split('/').pop();
       var rsvpData = {
         rsvpStatus: $("input[name=attendance]:checked").val(),
         plusOne: $("input[name=plus-one]:checked").val()
