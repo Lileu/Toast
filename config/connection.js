@@ -2,7 +2,7 @@
 var mysql = require("mysql");
 
 // If the server contains the JAWSDB_URL environmental variable, it	connects to	the	JawsDB database.
-if (process.env.JAWDB_URL) {
+if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 }
 // If	the	server	lacks	the	variable,	it	falls	back	on	an	explicitly	defined	local	database
