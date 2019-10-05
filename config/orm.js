@@ -18,7 +18,7 @@ function objToSql(ob) {
     var value = ob[key];
     if (Object.hasOwnProperty.call(ob, key)) {
       if (typeof value === "string" && value.indexOf(" ") >= 0) {
-        value = "'" + value + "'";
+        value = '"' + value + "'";
       }
       arr.push(key + "=" + value);
     }
@@ -78,14 +78,14 @@ var orm = {
   updateOne: function(table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;
 
-    queryString += " SET ";
-    queryString += objToSql(objColVals); //
+    queryString += " SET ?";
+    // queryString += objToSql(objColVals); //
     queryString += " WHERE ";
     queryString += condition;
 
     console.log(queryString);
 
-    connection.query(queryString, function(err, res) {
+    connection.query(queryString, objColVals,function (err, res) {
       if (err) {
         throw err;
       }

@@ -14,7 +14,8 @@ $(document).ready(function () {
         type: "PUT",
         data: rsvpData
       }).then(
-        function () {
+        function (data) {
+          console.log(data)
           console.log("changed rsvp to", newRsvp);
           console.log("changed +1 to", plusOne);
         }
