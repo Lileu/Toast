@@ -8,11 +8,11 @@ if (process.env.JAWDB_URL) {
 // If	the	server	lacks	the	variable,	it	falls	back	on	an	explicitly	defined	local	database
 else {
   connection = mysql.createConnection({
-    host: "localhost",
+    host: "jj820qt5lpu6krut.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     port: 3306,
-    user: "root",
-    password: "root",
-    database: "toast_db"
+    user: "roodvdh5bp8q5pvd2xot",
+    password: "rwszosnavg6h6asdboot",
+    database: "dwvx5eazn0ttvtej"
   });
 }
 
