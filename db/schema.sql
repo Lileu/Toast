@@ -10,6 +10,7 @@ CREATE TABLE eventDetails
     venueName varchar(50) NOT NULL,
     venueAddress varchar(80) NOT NULL,
     eventDate varchar(50) NOT NULL,
+    createdAt timestamp NOT NULL,
 	PRIMARY KEY (eventId)
 );
 
@@ -21,6 +22,7 @@ CREATE TABLE guestList
     plusOne BOOLEAN DEFAULT false NOT NULL,
     dateSent TIMESTAMP(0) NOT NULL,
     eventId int NOT NULL,
+    createdAt timestamp NOT NULL,
 	PRIMARY KEY (guestId),
     FOREIGN KEY (eventId)
     REFERENCES eventDetails(eventId)
