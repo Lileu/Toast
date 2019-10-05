@@ -19,6 +19,8 @@ var guestList = {
   
   update: function(guestId, data) {
     var condition = 'guestId = ' + guestId;
+    console.log(data);
+    console.log(condition);
     return new Promise(function(resolve, reject) {
       orm.updateOne(TABLE_NAME, data, condition, function(res) {
         resolve(res);
