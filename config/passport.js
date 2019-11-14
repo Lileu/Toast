@@ -38,7 +38,7 @@ passport.use(new LocalStrategy(
 passport.use(new FacebookStrategy({
    clientID: process.env.FBAPP_ID,
    clientSecret: process.env.FBAPP_SECRET,
-   callbackURL: "http://localhost:3000/auth/facebook/callback"
+   callbackURL: process.env.BASE_URL+"/auth/facebook/callback"
 },
    function (accessToken, refreshToken, profile, done) {
       db.User.findOne({
